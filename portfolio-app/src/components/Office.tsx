@@ -16,7 +16,11 @@ const Office = () => {
   return (
     <>
       <div ref={roomContainerRef} className={styles['room-container']}>
-        <div className={`${styles['room']} ${currentProjectShown == 1 ? styles['zoomIn1'] : ""} ${currentProjectShown == 2 ? styles['zoomIn2'] : ""}`} style={{marginLeft: currentProjectShown != null ? `${showScroll()}px` : "0px"}}>
+        <div className={`${styles['room']} 
+            ${currentProjectShown == 1 ? styles['zoomIn1'] : ""} 
+            ${currentProjectShown == 2 ? styles['zoomIn2'] : ""}
+            ${currentProjectShown == 3 ? styles['zoomIn3'] : ""}`} 
+            style={{marginLeft: currentProjectShown != null ? `${showScroll()}px` : "0px"}}>
             <div className={`${styles['side']} ${styles['back']}`} style={{zIndex: -1000}}></div>
             <div className={`${styles['side']} ${styles['left']}`}></div>
             <div className={`${styles['side']} ${styles['right']}`}></div>
@@ -28,6 +32,7 @@ const Office = () => {
             </div>
             <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {1}/>
             <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {2}/>
+            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {3}/>
 
             <img src="../../table.png" alt="table"
                 className={styles['table']}

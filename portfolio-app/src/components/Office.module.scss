@@ -50,12 +50,28 @@ body{
         }
     }
 }
+.magnifying-glass-1 {
+    top: 110px;
+    left: 230px;
+}
 .zoomIn1 {
     transform: translate3d(calc($zoomedIn * (50% - 259px)), calc($zoomedIn * -80px), 0) scale($zoomedIn);
     transition: transform 3s;
 }
+.magnifying-glass-2 {
+    top: -150px;
+    left: 530px;
+}
 .zoomIn2 {
     transform: translate3d(calc($zoomedIn * (50% - 560px)), calc($zoomedIn * 90px), 0) scale($zoomedIn);
+    transition: transform 3s;
+}
+.magnifying-glass-3 {
+    top: -150px;
+    left: 920px;
+}
+.zoomIn3 {
+    transform: translate3d(calc($zoomedIn * (50% - 950px)), calc($zoomedIn * 20px), 0) scale($zoomedIn);
     transition: transform 3s;
 }
 .initial {
@@ -89,14 +105,7 @@ body{
 
     }
 }
-.magnifying-glass-1 {
-    top: 110px;
-    left: 230px;
-}
-.magnifying-glass-2 {
-    top: -150px;
-    left: 530px;
-}
+
 .plant {
     position: relative;
     top: 270px;
@@ -116,7 +125,7 @@ img {
 }
 .table {
     position: relative;
-    top: -100px;
+    top: -170px;
     left: 400px;
 }
 .project-card {
