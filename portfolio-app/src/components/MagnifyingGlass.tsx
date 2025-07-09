@@ -8,7 +8,7 @@ interface MagnifyingGlassProps {
 
 const MagnifyingGlass = (props : MagnifyingGlassProps) => {
   return (
-    <button className={styles['magnifying-glass']}
+    <button className={`${styles["magnifying-glass"]} ${styles[`magnifying-glass-${props.id}`]}`}
         onClick={() => 
         {
             props.setCurrentProjectShown(props.id);

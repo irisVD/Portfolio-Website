@@ -1,5 +1,5 @@
 @use "../shared.scss";
-$zoomedIn : 2;
+$zoomedIn : 5;
 
 body{
     width: 80%;
@@ -54,20 +54,23 @@ body{
     transform: translate3d(calc($zoomedIn * (50% - 259px)), calc($zoomedIn * -80px), 0) scale($zoomedIn);
     transition: transform 3s;
 }
+.zoomIn2 {
+    transform: translate3d(calc($zoomedIn * (50% - 560px)), calc($zoomedIn * 90px), 0) scale($zoomedIn);
+    transition: transform 3s;
+}
 .initial {
     transform: scale(1);
 }
 
 .magnifying-glass {
     position: relative;
-    top: 110px;
-    left: 230px;
     display: block;
     background-color: transparent;
     border: none;
     &:hover {
         transform: scale(1.1);
     }
+    
     .magnifying-glass-glasspart {
         width: 30px;
         height: 30px;
@@ -85,6 +88,14 @@ body{
         left: 15px;
 
     }
+}
+.magnifying-glass-1 {
+    top: 110px;
+    left: 230px;
+}
+.magnifying-glass-2 {
+    top: -150px;
+    left: 530px;
 }
 .plant {
     position: relative;
@@ -105,7 +116,7 @@ img {
 }
 .table {
     position: relative;
-    top: 0px;
+    top: -100px;
     left: 400px;
 }
 .project-card {
