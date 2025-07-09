@@ -1,0 +1,14 @@
+.this-project-card {
+    height: 650px;
+    background-color: rgb(237, 237, 237);
+    .button-close-icon {
+        margin-left: auto; 
+        margin-right: 1em;
+        margin-top: 1em;
+        float: right;
+        .close-icon:hover {
+            background-color: rgb(157, 157, 157);
+            border-radius: 6.4px;
+        }
+    }
+}

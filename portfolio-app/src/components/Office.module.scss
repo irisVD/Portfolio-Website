@@ -1,21 +1,29 @@
 @use "../shared.scss";
+$zoomedIn : 2;
+
 body{
     width: 80%;
     margin: 0 auto;
 }
 
 .room-container {
-        overflow: hidden;
+        overflow-x: scroll;
+        overflow-y: hidden;
         border: 3px solid black;
-        height: 400px;
+        height: 700px;
+        max-height: 700px;
+        max-width: 1200px;
+        position: relative;
+        width: 100%;
     .room {
         transform-style: preserve-3d;
-        border: 3px solid gray;
-        height: 400px;
+        height: 700px;
         perspective: 1000px;
+        position: relative;
+        width: 100%;
         .side {
-            width: 800px;
-            height: 300px;
+            
+            height: 550px;
             display: block;
             position: absolute;
             z-index: -100;
@@ -24,27 +32,37 @@ body{
             background-color: hsl(175deg 100% 70%);
             top: 0px;
             left: 50px;
+            width: 1100px;
         }
         .left {
+            width: 120px;
             background-color: hsl(60, 42%, 81%);
             top: 0px;
-            left: -1520px;
-            transform: rotateY(70deg) translateZ(1100px);
+            left: -140px;
+            transform: rotateY(70deg) translateZ(120px);
+        }
+        .right {
+            width: 120px;
+            background-color: hsl(38, 53%, 74%);
+            top: 0px;
+            left: 1220px;
+            transform: rotateY(-70deg) translateZ(120px);
         }
     }
 }
-
-.zoomed {
-    transform: scale(2) translate3d(calc(50% - 250px), -15px, 0);
+.zoomIn1 {
+    transform: translate3d(calc($zoomedIn * (50% - 259px)), calc($zoomedIn * -80px), 0) scale($zoomedIn);
     transition: transform 3s;
 }
-
+.initial {
+    transform: scale(1);
+}
 
 .magnifying-glass {
     position: relative;
-    top: -110px;
+    top: 110px;
     left: 230px;
-    display: inline-block;
+    display: block;
     background-color: transparent;
     border: none;
     &:hover {
@@ -70,8 +88,9 @@ body{
 }
 .plant {
     position: relative;
-    top: 0px;
+    top: 270px;
     left: 230px;
+    display: inline-block;
     .plant-pot {
         background-color: blue;
         width: 100px;
@@ -86,6 +105,17 @@ img {
 }
 .table {
     position: relative;
-    top: -200px;
+    top: 0px;
     left: 400px;
+}
+.project-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+button {
+    background-color: transparent;
+    border: none;
 }
