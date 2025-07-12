@@ -17,9 +17,9 @@ const Office = () => {
     <>
       <div ref={roomContainerRef} className={styles['room-container']}>
         <div className={`${styles['room']} 
-            ${currentProjectShown == 1 ? styles['zoomIn1'] : ""} 
-            ${currentProjectShown == 2 ? styles['zoomIn2'] : ""}
-            ${currentProjectShown == 3 ? styles['zoomIn3'] : ""}`} 
+            ${currentProjectShown == 1 && styles['zoomIn1']} 
+            ${currentProjectShown == 2 && styles['zoomIn2']}
+            ${currentProjectShown == 3 && styles['zoomIn3']}`} 
             style={{marginLeft: currentProjectShown != null ? `${showScroll()}px` : "0px"}}>
             <div className={`${styles['side']} ${styles['back']}`} style={{zIndex: -1000}}></div>
             <div className={`${styles['side']} ${styles['left']}`}></div>
@@ -30,9 +30,9 @@ const Office = () => {
                     />
                 <div className={styles['plant-pot']}></div>
             </div>
-            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {1}/>
-            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {2}/>
-            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {3}/>
+            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {1} topPosition={110} leftPosition={230}/>
+            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {2} topPosition={-150} leftPosition={530}/>
+            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {3} topPosition={-150} leftPosition={920}/>
 
             <img src="../../table.png" alt="table"
                 className={styles['table']}
