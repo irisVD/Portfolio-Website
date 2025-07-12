@@ -8,12 +8,13 @@
     --moon-icon-color: black;
     --sun-icon-color: 177, 194, 189;
     --footer-text: 94, 122, 114;
-    --accent-text-default-background: 162, 213, 198;
+    --accent-text-default-background: 94, 122, 114;
+    --close-button-color: rgb(224, 244, 238);
 }
 
 [data-theme="dark"] {
     --primary-color: 162, 213, 198;
-    --primary-color-darker: 0, 0, 0;
+    --primary-color-darker: 162, 213, 198;
     --button-hover: 147, 193, 179;
     --secundary-color: 177, 255, 226;
     --my-background-color: rgb(20, 20, 20);
@@ -22,4 +23,5 @@
     --sun-icon-color: 255, 255, 255;
     --footer-text: 0, 0, 0;
     --accent-text-default-background: 162, 209, 196;
+    --close-button-color: rgb(39, 46, 43);
 }

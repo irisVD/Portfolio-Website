@@ -54,7 +54,7 @@ h3 {
         font-family: "Euphemia UCAS", Arial;
         margin: 1em 0;
         padding-bottom: 0.4em;
-        border-bottom: 1px solid var(--primary-color-darker);
+        border-bottom: 1px solid rgb(var(--accent-text-default-background));
     }
     display: flex;
     justify-content: space-around;
@@ -136,7 +136,7 @@ h3 {
 .project-list {
     background-color: rgba($color: var(--secundary-color), $alpha: 0.2);;
     padding: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     .project-list-item {
         margin: 2em 0;
     }
