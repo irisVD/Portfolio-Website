@@ -32,7 +32,7 @@ function App() {
       <Header />
       <div className='me-card'>
         <div>
-          <p style={{fontSize: "40px"}}>FULL STACK DEVELOPER</p>
+          <p>FULL STACK DEVELOPER</p>
           {!isMobile ? <p className='iris-name'>Iris Van Damme</p> : <></>}
         </div>
         
