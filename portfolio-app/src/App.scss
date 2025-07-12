@@ -4,7 +4,7 @@ $button-hover-green: #93c1b3;
 $mint-green: #CFFFE2;
 
 h1 {
-    margin: 1em 3em;
+    margin: 1em 0 1em 10%;
     font-family: "Euphemia UCAS", Arial;
 }
 h2, h3 {
@@ -57,7 +57,7 @@ h3 {
         border-radius: 100px;
         width: 60%;
         margin: 0 2em;
-        box-shadow: -10px -10px 5px rgba($color: $mint-green, $alpha: 0.5);;
+        box-shadow: -10px -10px 5px rgba($color: $mint-green, $alpha: 0.5);
     }
 }
 .qualities {

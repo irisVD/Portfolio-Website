@@ -21,7 +21,6 @@ $zoomedIn : 5;
         position: relative;
         width: 100%;
         .side {
-            
             height: 550px;
             display: block;
             position: absolute;
@@ -37,15 +36,15 @@ $zoomedIn : 5;
             width: 120px;
             background-color: rgba($color: $sea-green-darker, $alpha: 0.2);
             top: 0px;
-            left: -140px;
-            transform: rotateY(70deg) translateZ(120px);
+            left: -170px;
+            transform: rotateY(70deg) translateZ(150px);
         }
         .right {
             width: 120px;
             background-color: rgba($color: $sea-green-darker, $alpha: 0.2);
             top: 0px;
-            left: 1220px;
-            transform: rotateY(-70deg) translateZ(120px);
+            left: 1255px;
+            transform: rotateY(-70deg) translateZ(150px);
         }
     }
     @media only screen and (max-width: 850px) {
@@ -102,6 +101,11 @@ $zoomedIn : 5;
         height: 100px;
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
+        box-shadow: 3px -3px 5px rgba($color: black, $alpha: 0.3), -0px 3px 5px rgba($color: black, $alpha: 0.5);
+    }
+    .plant-top {
+        filter: drop-shadow(15px -30px 30px rgba($color: black, $alpha: 0.3));
+        -webkit-filter: drop-shadow(15px -15px 30px rgba($color: black, $alpha: 0.3));
     }
 }
 
@@ -112,18 +116,25 @@ img {
     position: absolute;
     top: 370px;
     left: 440px;
+    filter: drop-shadow(3px -3px 5px rgba($color: black, $alpha: 0.3));
+    -webkit-filter: drop-shadow(3px -3px 5px rgba($color: black, $alpha: 0.3));
+
 }
 .shelf {
     position: absolute;
     top: 120px;
     left: 850px;
     z-index: -2;
+    filter: drop-shadow(3px -3px 5px rgba($color: black, $alpha: 0.3));
+    -webkit-filter: drop-shadow(3px -3px 5px rgba($color: black, $alpha: 0.3));
 }
 .notice-board {
     position: absolute;
     top: 90px;
     left: 390px;
     z-index: -3;
+    filter: drop-shadow(3px -3px 5px rgba($color: black, $alpha: 0.3));
+    -webkit-filter: drop-shadow(3px -3px 5px rgba($color: black, $alpha: 0.3));
 }
 .project-card {
   position: absolute;

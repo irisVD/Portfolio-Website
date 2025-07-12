@@ -35,7 +35,7 @@ const Office = () => {
             <div className={`${styles['side']} ${styles['right']}`}></div>
 
             <div className={styles['plant']}>
-                <img src="../../plant_top.png" alt="plant_top"
+                <img src="../../plant_top.png" className={styles["plant-top"]} alt="plant_top"
                     />
                 <div className={styles['plant-pot']}></div>
             </div>
