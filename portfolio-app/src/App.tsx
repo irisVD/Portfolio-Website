@@ -1,4 +1,5 @@
 import './App.scss';
+import './_shared.scss';
 import Header from './components/Header';
 import Office from './components/Office';
 import { useEffect, useState } from 'react';
@@ -13,6 +14,7 @@ import ProjectCard from './components/ProjectCard';
 function App() {
   const [isMobile, setIsMobile] = useState(false)
   const [isListView, setIsListView] = useState(false);
+  const [darkmode, setDarkMode] = useState(false);
 
   //choose the screen size 
   const handleResize = () => {
@@ -28,8 +30,8 @@ function App() {
     window.addEventListener("resize", handleResize)
   })
   return (
-    <>
-      <Header />
+    <div className="app" data-theme={darkmode ? "dark" : "light"}>
+      <Header setDarkMode={setDarkMode}/>
       <div className='me-card'>
         <div>
           <p>FULL STACK DEVELOPER</p>
@@ -88,11 +90,11 @@ function App() {
             const mailLink = `mailto:irisvandamme@live.com`;
             window.location.href = mailLink;
           }}
-        ><p style={{marginRight: "0.75em"}}>Mail me</p><IoIosMail /></button>
+        ><p style={{marginRight: "0.75em", color: "black"}}>Mail me</p><IoIosMail /></button>
       </div>
 
       <div className='footer'>Developed by Iris Van Damme</div>
-    </>
+    </div>
   )
 }
 

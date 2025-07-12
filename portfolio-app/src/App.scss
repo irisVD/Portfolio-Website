@@ -1,11 +1,42 @@
-$sea-green: #A2D5C6;
-$sea-green-darker: #5e7a72;
-$button-hover-green: #93c1b3;
-$mint-green: #CFFFE2;
+@use './shared' as *;
 
+.app {
+    background-color: var(--my-background-color);
+    color: var(--text-color)
+}
 h1 {
-    margin: 1em 0 1em 10%;
     font-family: "Euphemia UCAS", Arial;
+}
+.title-part {
+    display: flex;
+    margin: 0 10% 1em 10%;
+    padding-top: 1em;
+    h1 {
+        flex-grow: 3;
+    }
+}
+.darkmode {
+    margin-right: 1em;
+    .moon-icon, .sun-icon {
+        margin: 0.25em;
+    }
+    .moon-icon {
+        color: rgb(var(--moon-icon-color));
+    }
+    .sun-icon {
+        color: rgb(var(--sun-icon-color));
+    }
+}
+
+.languages {
+    display: flex;
+    & > * {
+        width: 24px;
+        height: 16px;
+    }
+    svg {
+        margin: 0.25em 0.5em;
+    }
 }
 h2, h3 {
     font-family: "Euphemia UCAS", Arial;
@@ -23,21 +54,24 @@ h3 {
         font-family: "Euphemia UCAS", Arial;
         margin: 1em 0;
         padding-bottom: 0.4em;
-        border-bottom: 1px solid rgba($color: $sea-green-darker, $alpha: 1);
+        border-bottom: 1px solid var(--primary-color-darker);
     }
     display: flex;
     justify-content: space-around;
     margin-bottom: 2em;
-    background-color: rgba($color: $mint-green, $alpha: 0.2);
+    background-color: rgba(var(--secundary-color), 0.2);
     padding: 0 7%;
 }
 .me-card {
     width: 80%;
     margin: 0 auto 2em auto;
-    background-image: linear-gradient(to right, rgba($color: $mint-green, $alpha: 0.5), transparent);
+    background-image: linear-gradient(to right, rgba($color: var(--secundary-color), $alpha: 0.5), transparent);
     display: flex;
     justify-content: center;
     padding: 2em 3em;
+    p {
+        font-size: 40px;
+    }
     div {
         display: flex;
         flex-direction: column;
@@ -57,30 +91,30 @@ h3 {
         border-radius: 100px;
         width: 60%;
         margin: 0 2em;
-        box-shadow: -10px -10px 5px rgba($color: $mint-green, $alpha: 0.5);
+        box-shadow: -10px -10px 5px rgba($color: var(--secundary-color), $alpha: 0.5);
     }
 }
 .qualities {
     display: flex;
     justify-content: space-around;
-    color: rgba($color: $sea-green-darker, $alpha: 1);
+    color: rgba($color: var(--accent-text-default-background), $alpha: 1);
     width: 80%;
     margin: 2rem auto 2rem auto;
     font-size: 28px;
 }
 .about-me{
-    background-color: rgba($color: $sea-green, $alpha: 0.2);
+    background-color: rgba($color: var(--primary-color), $alpha: 0.2);
     padding: 2em 15%;
     margin-bottom: 5em;
     div, p {
         margin: 1em;
     }
     p:first-of-type {
-        color: rgba($color: $sea-green-darker, $alpha: 1);
+        color: rgba($color: var(--primary-color-darker), $alpha: 1);
     }
 }
 .dotted-line {
-    border-top: 5px dotted black;
+    border-top: 5px dotted var(--text-color);
     width: 20%;
     margin: 1em auto;
 }
@@ -95,12 +129,12 @@ h3 {
     justify-content: space-between;
     align-items: center;
     p {
-        color: rgba($color: $sea-green-darker, $alpha: 1);
+        color: rgba($color: var(--accent-text-default-background), $alpha: 1);
         margin-right: 0.75em;
     }
 }
 .project-list {
-    background-color: rgba($color: $mint-green, $alpha: 0.2);;
+    background-color: rgba($color: var(--secundary-color), $alpha: 0.2);;
     padding: 2em;
     margin-bottom: 2em;
     .project-list-item {
@@ -108,11 +142,11 @@ h3 {
     }
 }
 .green-button {
-    background-color: rgba($color: $sea-green, $alpha: 1);
+    background-color: rgba($color: var(--primary-color), $alpha: 1);
     padding: 1em;
     border-radius: 5px;
     &:hover {
-        background-color: rgba($color: $button-hover-green, $alpha: 0.8);
+        background-color: rgba($color: var(--button-hover), $alpha: 0.8);
     }
     p {
         margin: 0;
@@ -138,15 +172,15 @@ h3 {
     }
 }
 .contact {
-    background-color: rgba($color: $mint-green, $alpha: 0.15);
+    background-color: rgba($color: var(--secundary-color), $alpha: 0.15);
     margin-top: 4em;
 }
 
 .footer {
-    background-color: rgba($color: $sea-green, $alpha: 0.3);
+    background-color: rgba($color: var(--primary-color), $alpha: 0.3);
     text-align: right;
     padding: 1em 5% 2em 0;
-    color: rgba(83, 111, 102, 1);
+    color: rgba(var(--footer-text), 1);
 }
 
 @media only screen and (max-width: 850px) {
@@ -168,6 +202,9 @@ h3 {
     }
 }
 @media only screen and (max-width: 720px) {
+    .title-part {
+        flex-direction: column-reverse;
+    }
     .me-card {
         display: block;
         padding-left: 0.5em;

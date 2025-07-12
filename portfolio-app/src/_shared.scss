@@ -1,0 +1,25 @@
+[data-theme="light"] {
+    --primary-color: 162, 213, 198;
+    --primary-color-darker: 94, 122, 114;
+    --button-hover: 147, 193, 179;
+    --secundary-color: 207, 255, 226;
+    --my-background-color: white;
+    --text-color: black;
+    --moon-icon-color: black;
+    --sun-icon-color: 177, 194, 189;
+    --footer-text: 94, 122, 114;
+    --accent-text-default-background: 162, 213, 198;
+}
+
+[data-theme="dark"] {
+    --primary-color: 162, 213, 198;
+    --primary-color-darker: 0, 0, 0;
+    --button-hover: 147, 193, 179;
+    --secundary-color: 177, 255, 226;
+    --my-background-color: rgb(20, 20, 20);
+    --text-color: white;
+    --moon-icon-color: 58, 68, 65;
+    --sun-icon-color: 255, 255, 255;
+    --footer-text: 0, 0, 0;
+    --accent-text-default-background: 162, 209, 196;
+}
