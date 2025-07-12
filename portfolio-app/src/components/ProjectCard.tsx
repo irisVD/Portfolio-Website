@@ -3,7 +3,8 @@ import styles from "./ProjectCard.module.scss";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 interface ProjectCardProps {
-  setCurrentProjectShown: (value: number | null) => void;
+  // is null when shown ProjectCard is shown in list view
+  setCurrentProjectShown: ((value: number | null) => void) | null;
   project: Project;
 }
 interface Project {
@@ -24,7 +25,7 @@ const ProjectCard = (props : ProjectCardProps) => {
   }, []);
 
   return (
-    <div className={styles['this-project-card']} 
+    <div className={`${styles['this-project-card']} ${props.setCurrentProjectShown ? styles['this-office-project-card'] : styles['this-list-project-card']}`} 
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 3s"
@@ -32,8 +33,10 @@ const ProjectCard = (props : ProjectCardProps) => {
     >
       <button 
         className={styles['button-close-icon']}
+        style={{display: props.setCurrentProjectShown ? "block" : "none"}}
         onClick={() => {
-          props.setCurrentProjectShown(null);
+          if(props.setCurrentProjectShown)
+            props.setCurrentProjectShown(null);
         }}
         >
           <IoIosCloseCircleOutline  className={styles['close-icon']} size = {30}/>

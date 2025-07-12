@@ -7,6 +7,8 @@ import DottedLine from './DottedLine';
 import skills from '../skills.json';
 import React from 'react';
 import { IoIosMail } from "react-icons/io";
+import projects from "../projects.json";
+import ProjectCard from './components/ProjectCard';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false)
@@ -57,16 +59,16 @@ function App() {
       <div className='h2-title'><h2>Projects</h2><IoIosArrowDown size={30}/></div>
 
       <div className='office-instructions'>
-        <p>Click on the different elements to explore past code projects</p>
-        <button className='green-button'
-          onClick={() => setIsListView(true)}>
-            Normal list view
+        {!isListView && <p>Click on the different elements to explore past code projects</p>}
+        <button className='green-button' style={{marginRight: "0px", marginLeft: "auto"}}
+          onClick={() => setIsListView(!isListView)}>
+            {isListView ? "Office view" : "Normal list view"}
         </button>
       </div>
       
       {!isListView ? <Office /> :
-        <div>
-          {}
+        <div className='project-list'>
+          {projects.map((p, index) => <div key={index} className='project-list-item'><ProjectCard project={projects[index]} setCurrentProjectShown={null}/></div>)}
         </div>
       }
     
@@ -81,7 +83,12 @@ function App() {
       <DottedLine />
       <div className='about-me contact' style={{display: "flex", alignItems: "center"}}>
         <div style={{display: "flex", alignItems: "baseline", marginRight: "15%"}}><h3>Contact</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
-        <button className="green-button" style={{display: "flex", alignItems: "center"}}><p style={{marginRight: "0.75em"}}>Mail me</p><IoIosMail /></button>
+        <button className="green-button" style={{display: "flex", alignItems: "center"}}
+          onClick={() => {
+            const mailLink = `mailto:irisvandamme@live.com`;
+            window.location.href = mailLink;
+          }}
+        ><p style={{marginRight: "0.75em"}}>Mail me</p><IoIosMail /></button>
       </div>
 
       <div className='footer'>Developed by Iris Van Damme</div>

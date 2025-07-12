@@ -1,25 +1,11 @@
 .this-project-card {
-    overflow-y: scroll !important;
-    height: 650px;
+    line-height: 1.5em;
     background-color: white;
-    border-radius: 5px;
-    .button-close-icon {
-        margin-left: auto; 
-        margin-right: 1em;
-        margin-top: 1em;
-        float: right;
-        .close-icon:hover {
-            background-color: rgb(237, 237, 237);
-            border-radius: 40px;
-        }
-    }
+    border-radius: 10px;
+    padding-bottom: 1em;
+
     .project-content {
-        margin: 3em 2em;
         white-space: pre-wrap;
-        h1, p {
-            margin-left: calc(20% - 2rem);
-            margin-right: calc(20% - 2rem);
-        }
         img {
             display: block;
             max-width: 90%;
@@ -33,5 +19,49 @@
             font-weight: 600;
         }
     }
+}
+.this-office-project-card {
+    height: 650px;
+    overflow-y: scroll;
+    h1, p {
+        margin-left: calc(20% - 2rem);
+        margin-right: calc(20% - 2rem);
+    }
+    .button-close-icon {
+        margin-left: auto; 
+        margin-right: 1em;
+        margin-top: 1em;
+        float: right;
+        .close-icon:hover {
+            background-color: rgb(237, 237, 237);
+            border-radius: 40px;
+        }
+    }
 
+}
+.this-list-project-card {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
+    padding-top: 1em;
+    h1, p {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project-content {
+        img {
+            margin-bottom: 3em;
+            max-width: 80%;
+        }
+    }
+}
+@media only screen and (max-width: 1240px) {
+    .this-list-project-card {
+        width: 80%;
+        h1, p {
+            width: 80%;
+        }
+    }
 }

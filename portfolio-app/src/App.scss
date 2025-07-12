@@ -94,6 +94,13 @@ h3 {
         margin-right: 0.75em;
     }
 }
+.project-list {
+    background-color: rgba($color: #CFFFE2, $alpha: 0.2);
+    padding: 2em;
+    .project-list-item {
+        margin: 2em 0;
+    }
+}
 .green-button {
     background-color: rgb(162, 213, 198);
     padding: 1em;
@@ -109,7 +116,7 @@ h3 {
 .skills {
     display: grid;
     grid-template-columns: max-content 1fr;
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     div {
         padding:  2em 0;
