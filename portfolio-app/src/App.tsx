@@ -4,9 +4,13 @@ import Office from './components/Office';
 import { useEffect, useState } from 'react';
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import DottedLine from './DottedLine';
+import skills from '../skills.json';
+import React from 'react';
+import { IoIosMail } from "react-icons/io";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false)
+  const [isListView, setIsListView] = useState(false);
 
   //choose the screen size 
   const handleResize = () => {
@@ -54,13 +58,33 @@ function App() {
 
       <div className='office-instructions'>
         <p>Click on the different elements to explore past code projects</p>
-        <button>Normal grid view</button>
+        <button className='green-button'
+          onClick={() => setIsListView(true)}>
+            Normal list view
+        </button>
       </div>
       
-      <Office />
+      {!isListView ? <Office /> :
+        <div>
+          {}
+        </div>
+      }
+    
 
       <DottedLine />
       <div className='h2-title'><h2>Skills</h2><IoIosArrowDown size={30}/></div>
+
+      <div className="skills">
+        {Object.entries(skills).map(([k, v]) => <React.Fragment key={k}><div>{k}</div><div className='skill-value'>{v}</div></React.Fragment>)}
+      </div>
+      
+      <DottedLine />
+      <div className='about-me contact' style={{display: "flex", alignItems: "center"}}>
+        <div style={{display: "flex", alignItems: "baseline", marginRight: "15%"}}><h3>Contact</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
+        <button className="green-button" style={{display: "flex", alignItems: "center"}}><p style={{marginRight: "0.75em"}}>Mail me</p><IoIosMail /></button>
+      </div>
+
+      <div className='footer'>Developed by Iris Van Damme</div>
     </>
   )
 }

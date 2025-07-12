@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import styles from "./Office.module.scss";
 import ProjectCard from "./ProjectCard";
 import MagnifyingGlass from './MagnifyingGlass';
+import projects from "../../projects.json";
 
 const Office = () => {
     const [currentProjectShown, setCurrentProjectShown] = useState<number | null>(null);
@@ -9,6 +10,7 @@ const Office = () => {
     const [topOffset, setTopOffset] = useState<number | null>(null);
     const roomContainerRef = useRef<HTMLDivElement>(null);
 
+    // hardcoded because there will never be a lot of magnifying glasses
     const topPositionMagnGlass1 = 410;
     const leftPositionMagnGlass1 = 240;
     const topPositionMagnGlass2 = 150;
@@ -52,7 +54,7 @@ const Office = () => {
             />
           </div>
           {
-            currentProjectShown != null ? <div className={styles['project-card']} style={{marginLeft: currentProjectShown != null ? `${showScroll()}px` : "0px"}}><ProjectCard currentProjectShown={currentProjectShown} setCurrentProjectShown={setCurrentProjectShown}/></div> : <></>
+            currentProjectShown != null && <div className={styles['project-card']} style={{marginLeft: currentProjectShown != null ? `${showScroll()}px` : "0px"}}><ProjectCard project={projects[currentProjectShown - 1]} setCurrentProjectShown={setCurrentProjectShown}/></div>
           }
         </div>
     </>

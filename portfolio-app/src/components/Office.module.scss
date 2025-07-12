@@ -9,8 +9,8 @@ $zoomedIn : 5;
     height: 700px;
     max-height: 700px;
     position: relative;
-    width: 95%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 0 auto 3em auto;
     .room {
         transform-style: preserve-3d;
         height: 700px;
@@ -44,6 +44,9 @@ $zoomedIn : 5;
             left: 1220px;
             transform: rotateY(-70deg) translateZ(120px);
         }
+    }
+    @media only screen and (max-width: 850px) {
+        width: 95%;
     }
 }
 
