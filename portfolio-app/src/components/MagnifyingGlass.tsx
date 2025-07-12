@@ -6,6 +6,8 @@ interface MagnifyingGlassProps {
     id: number;
     topPosition: number;
     leftPosition: number;
+    setLeftOffset: (value: number | null) => void;
+    setTopOffset: (value: number | null) => void;
 }
 
 const MagnifyingGlass = (props : MagnifyingGlassProps) => {
@@ -14,6 +16,8 @@ const MagnifyingGlass = (props : MagnifyingGlassProps) => {
         onClick={() => 
         {
             props.setCurrentProjectShown(props.id);
+            props.setLeftOffset(props.leftPosition);
+            props.setTopOffset(props.topPosition);
         }}
     >
         <div className={styles['magnifying-glass-glasspart']}></div>

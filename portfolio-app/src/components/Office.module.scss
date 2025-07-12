@@ -47,24 +47,18 @@ $zoomedIn : 5;
     }
 }
 
-.zoomIn1 {
-    transform: translate3d(calc($zoomedIn * (50% - 259px)), calc($zoomedIn * -80px), 0) scale($zoomedIn);
+.zoomIn {
+    transform: translate3d(calc($zoomedIn * (50% - var(--left-offset) - 20px) + var(--scroll)), calc($zoomedIn * (0px - (var(--top-offset) - 50% + 30px))), 0) scale($zoomedIn);
     transition: transform 3s;
+    background-color: var(--main-color);
 }
-.zoomIn2 {
-    transform: translate3d(calc($zoomedIn * (50% - 560px)), calc($zoomedIn * 90px), 0) scale($zoomedIn);
-    transition: transform 3s;
-}
-.zoomIn3 {
-    transform: translate3d(calc($zoomedIn * (50% - 950px)), calc($zoomedIn * 20px), 0) scale($zoomedIn);
-    transition: transform 3s;
-}
+
 .initial {
     transform: scale(1);
 }
 
 .magnifying-glass {
-    position: relative;
+    position: absolute;
     display: block;
     background-color: transparent;
     border: none;
@@ -92,7 +86,7 @@ $zoomedIn : 5;
 }
 
 .plant {
-    position: relative;
+    position: absolute;
     top: 270px;
     left: 230px;
     display: inline-block;
@@ -109,20 +103,20 @@ img {
     display: block;
 }
 .table {
-    position: relative;
-    top: -170px;
-    left: 400px;
+    position: absolute;
+    top: 370px;
+    left: 440px;
 }
 .shelf {
-    position: relative;
-    top: -620px;
+    position: absolute;
+    top: 120px;
     left: 850px;
     z-index: -2;
 }
 .notice-board {
-    position: relative;
-    top: -1130px;
-    left: 380px;
+    position: absolute;
+    top: 90px;
+    left: 390px;
     z-index: -3;
 }
 .project-card {
