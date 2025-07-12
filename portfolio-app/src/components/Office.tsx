@@ -15,8 +15,8 @@ const Office = () => {
     const leftPositionMagnGlass1 = 240;
     const topPositionMagnGlass2 = 150;
     const leftPositionMagnGlass2 = 580;
-    const topPositionMagnGlass3 = 350;
-    const leftPositionMagnGlass3 = 980;
+    // const topPositionMagnGlass3 = 350;
+    // const leftPositionMagnGlass3 = 980;
 
 
     const showScroll = () => {
@@ -41,7 +41,7 @@ const Office = () => {
             </div>
             <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {1} topPosition={topPositionMagnGlass1} leftPosition={leftPositionMagnGlass1} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/>
             <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {2} topPosition={topPositionMagnGlass2} leftPosition={leftPositionMagnGlass2} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/>
-            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {3} topPosition={topPositionMagnGlass3} leftPosition={leftPositionMagnGlass3} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/>
+            {/* <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {3} topPosition={topPositionMagnGlass3} leftPosition={leftPositionMagnGlass3} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/> */}
 
             <img src="../../table.png" alt="table"
                 className={styles['table']}

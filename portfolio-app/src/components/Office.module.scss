@@ -1,4 +1,7 @@
-@use "../shared.scss";
+$sea-green: #A2D5C6;
+$sea-green-darker: #5e7a72;
+$button-hover-green: #93c1b3;
+$mint-green: #CFFFE2;
 $zoomedIn : 5;
 
 
@@ -25,21 +28,21 @@ $zoomedIn : 5;
             z-index: -100;
         }
         .back {
-            background-color: hsl(175deg 100% 70%);
+            background-color: rgba($color: $sea-green, $alpha: 0.2);
             top: 0px;
             left: 50px;
             width: 1100px;
         }
         .left {
             width: 120px;
-            background-color: hsl(60, 42%, 81%);
+            background-color: rgba($color: $sea-green-darker, $alpha: 0.2);
             top: 0px;
             left: -140px;
             transform: rotateY(70deg) translateZ(120px);
         }
         .right {
             width: 120px;
-            background-color: hsl(38, 53%, 74%);
+            background-color: rgba($color: $sea-green-darker, $alpha: 0.2);
             top: 0px;
             left: 1220px;
             transform: rotateY(-70deg) translateZ(120px);
@@ -94,7 +97,7 @@ $zoomedIn : 5;
     left: 230px;
     display: inline-block;
     .plant-pot {
-        background-color: blue;
+        background-color: black;
         width: 100px;
         height: 100px;
         border-bottom-left-radius: 50px;
