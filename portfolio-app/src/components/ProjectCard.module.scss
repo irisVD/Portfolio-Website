@@ -1,14 +1,37 @@
 .this-project-card {
+    overflow-y: scroll !important;
     height: 650px;
-    background-color: rgb(237, 237, 237);
+    background-color: white;
+    border-radius: 5px;
     .button-close-icon {
         margin-left: auto; 
         margin-right: 1em;
         margin-top: 1em;
         float: right;
         .close-icon:hover {
-            background-color: rgb(157, 157, 157);
-            border-radius: 6.4px;
+            background-color: rgb(237, 237, 237);
+            border-radius: 40px;
         }
     }
+    .project-content {
+        margin: 3em 2em;
+        white-space: pre-wrap;
+        h1, p {
+            margin-left: calc(20% - 2rem);
+            margin-right: calc(20% - 2rem);
+        }
+        img {
+            display: block;
+            max-width: 90%;
+            max-height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 10px 10px 5px lightgrey;
+            margin-bottom: 2em;
+        }
+        span:first-child {
+            font-weight: 600;
+        }
+    }
+
 }

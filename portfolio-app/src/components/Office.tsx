@@ -28,7 +28,7 @@ const Office = () => {
             <div className={styles['plant']}>
                 <img src="../../plant_top.png" alt="plant_top"
                     />
-                <div className={styles['plant-pot']} >hello</div>
+                <div className={styles['plant-pot']}></div>
             </div>
             <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {1}/>
             <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {2}/>
@@ -36,13 +36,18 @@ const Office = () => {
 
             <img src="../../table.png" alt="table"
                 className={styles['table']}
-                />
+            />
+            <img src="../../shelf.png" alt="shelf"
+                className={styles['shelf']}
+            />
+            <img src="../../notice_board.png" alt="notice board"
+                className={styles['notice-board']}
+            />
           </div>
           {
             currentProjectShown != null ? <div className={styles['project-card']} style={{marginLeft: currentProjectShown != null ? `${showScroll()}px` : "0px"}}><ProjectCard currentProjectShown={currentProjectShown} setCurrentProjectShown={setCurrentProjectShown}/></div> : <></>
           }
         </div>
-        {showScroll()}
     </>
 
 
