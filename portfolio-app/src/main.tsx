@@ -8,16 +8,20 @@ import {I18nextProvider} from "react-i18next";
 
 import global_en from "./translations/en/global_en.json";
 import global_nl from "./translations/nl/global_nl.json";
+import projects_en from "./translations/en/projects_en.json";
+import projects_nl from "./translations/nl/projects_nl.json";
 
 i18next.init({
   interpolation: {escapeValue: false}, // emitigate attacks,
   lng: "en",
   resources: {
     en: {
-      global: global_en
+      global: global_en,
+      projects: projects_en
     },
     nl: {
-      global: global_nl
+      global: global_nl,
+      projects: projects_nl
     }
   }
 })

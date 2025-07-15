@@ -1,0 +1,22 @@
+{
+    "allProjects":[
+        {
+            "title": "NimbleIt",
+            "image": "../../nimbleit.png",
+            "description": "Nimble-it is een webapplicatie die je helpt je voorraadkast te organiseren, te onderhouden en recepten op te slaan. \nDe gebruiker ontvangt meldingen voor producten die bijna over de datum zijn en toont recepten met producten die bijna over de datum zijn. \n\nZoek naar recepten met ingrediënten die je al in je voorraadkast hebt staan. Als je het recept maakt, kun je met één klik de benodigde ingrediënten uit je voorraad halen.",
+            "backend": "C# (.NET, ASP.NET)",
+            "frontend": "React",
+            "database": "MySQL database and Azure blob storage",
+            "extra": "Ontwikkeld door William, Louis, Abdil, Lucca & Iris"
+        },
+        {
+            "title": "InterieurSim",
+            "image": "../../interieursim.png",
+            "description": "InterieurSim is een webapplicatie waarmee je een interieur op maat kunt ontwerpen. \nDeze applicatie is ontwikkeld voor mensen die naar een nieuwe woning zijn verhuisd en zich niet kunnen voorstellen waar ze hun interieur moeten plaatsen. Met InterieurSim kun je de geïnstalleerde producten of je eigen producten in een lege ruimte plaatsen om een interieurindeling te creëren die aan jouw wensen voldoet.",
+            "backend": "C# (.NET, ASP.NET) using Identity Server",
+            "frontend": "React",
+            "database": "Azure Cosmos db and Azure blob storage",
+            "extra": ""
+        }
+    ]
+}

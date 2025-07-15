@@ -18,6 +18,10 @@
             "instruction": "Click on the different elements to explore past code projects",
             "buttonOfficeView": "Office view",
             "normalListView": "Normal list view"
+        },
+        "other": "Other",
+        "footer": {
+            "developedBy": "Developed by Iris Van Damme"
         }
     }
 }

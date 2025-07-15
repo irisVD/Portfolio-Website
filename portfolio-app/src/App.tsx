@@ -38,7 +38,7 @@ function App() {
       
       <div className='me-card'>
         <div>
-          <p>FULL STACK DEVELOPER</p>
+          <p>{t("app.fullStackDeveloper")}</p>
           {!isMobile ? <p className='iris-name'>Iris Van Damme</p> : <></>}
         </div>
         
@@ -47,25 +47,20 @@ function App() {
       </div>
       <div className='qualities'>
         <p>{t("app.qualities.teamwork")}</p>
-        <p>EAGER TO LEARN</p>
-        <p>INDEPENDENT</p>
+        <p>{t("app.qualities.eagerToLearn")}</p>
+        <p>{t("app.qualities.independent")}</p>
       </div>
 
       {/* ABOUT ME */}
       <div className='about-me'>
-        <div style={{display: "flex", alignItems: "center"}}><h3>About me</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
-        <p>
-          I am a full stack developer pursuing an associate degree at HoGent (Ghent college) because I'm
-          passionate about coding, algorithms and IT. Especially finding new challenges everyday and overcoming
-          them drives me to learn more. Specialised in C# (.NET), Java, JavaScript (React & Node.js) and MySQL/
-          Microsoft SQL Server/MongoDB.
-        </p>
-        <p style={{fontWeight: "600"}}>Currently looking for an internship (based in the East Flanders) for the period September 2025 - January 2026.</p>
+        <div style={{display: "flex", alignItems: "center"}}><h3>{t("header.aboutMe")}</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
+        <p>{t("app.aboutMe")}</p>
+        <p style={{fontWeight: "600"}}>{t("app.internship")}</p>
       </div>
 
       <DottedLine />
       {/* PROJECTS */}
-      <div className='h2-title'><h2>Projects</h2><IoIosArrowDown size={30}/></div>
+      <div className='h2-title'><h2>{t("header.projects")}</h2><IoIosArrowDown size={30}/></div>
 
       <div className='office-instructions'>
         {!isListView && <p>Click on the different elements to explore past code projects</p>}
@@ -77,14 +72,18 @@ function App() {
       
       {!isListView ? <Office /> :
         <div className='project-list'>
-          {projects.map((p, index) => <div key={index} className='project-list-item'><ProjectCard project={projects[index]} setCurrentProjectShown={null}/></div>)}
+          {[...Array(projects.allProjects.length)].map((_, i) => (
+            <div key={i} className='project-list-item'>
+              <ProjectCard project={i} setCurrentProjectShown={null} />
+            </div>
+          ))}
         </div>
       }
     
 
       <DottedLine />
       {/* SKILLS */}
-      <div className='h2-title'><h2>Skills</h2><IoIosArrowDown size={30}/></div>
+      <div className='h2-title'><h2>{t("header.skills")}</h2><IoIosArrowDown size={30}/></div>
 
       <div className="skills">
         {Object.entries(skills).map(([k, v]) => <React.Fragment key={k}><div>{k}</div><div className='skill-value'>{v}</div></React.Fragment>)}
@@ -92,7 +91,7 @@ function App() {
       
       <DottedLine />
       <div className='about-me contact' style={{display: "flex", alignItems: "center"}}>
-        <div style={{display: "flex", alignItems: "baseline", marginRight: "15%"}}><h3>Contact</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
+        <div style={{display: "flex", alignItems: "baseline", marginRight: "15%"}}><h3>{t("header.contact")}</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
         <button className="green-button" style={{display: "flex", alignItems: "center"}}
           onClick={() => {
             const mailLink = `mailto:irisvandamme@live.com`;

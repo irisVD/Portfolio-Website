@@ -13,7 +13,7 @@ interface HeaderProps{
 
 
 const Header = (props : HeaderProps) => {
-  const [t, i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation(["global", "projects", "skills"]);
 
   const handleChangeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -36,10 +36,10 @@ const Header = (props : HeaderProps) => {
               </button>
             </div>
             <div className='languages'>
-              <button
+              <button style={{filter: i18n.language == "en" ? "saturate(0.5)" : "saturate(1)"}}
                 onClick={() => handleChangeLanguage("en")}
-              ><GB /></button>/
-              <button
+              ><GB /></button>
+              <button style={{filter: i18n.language == "nl" ? "saturate(0.5)" : "saturate(1)"}}
                 onClick={() => handleChangeLanguage("nl")}
               ><NL /></button>
             </div>
@@ -49,9 +49,9 @@ const Header = (props : HeaderProps) => {
         
         <div className="menu">
           <div>{t("header.aboutMe")}</div>
-          <div>Projects</div>
-          <div>Skills</div>
-          <div>Contact</div>
+          <div>{t("header.projects")}</div>
+          <div>{t("header.skills")}</div>
+          <div>{t("header.contact")}</div>
         </div>
     </>
     

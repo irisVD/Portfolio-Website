@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import styles from "./Office.module.scss";
 import ProjectCard from "./ProjectCard";
 import MagnifyingGlass from './MagnifyingGlass';
-import projects from "../translations/en/projects_en.json";
 
 const Office = () => {
     const [currentProjectShown, setCurrentProjectShown] = useState<number | null>(null);
@@ -54,7 +53,7 @@ const Office = () => {
             />
           </div>
           {
-            currentProjectShown != null && <div className={styles['project-card']} style={{marginLeft: currentProjectShown != null ? `${showScroll()}px` : "0px"}}><ProjectCard project={projects[currentProjectShown - 1]} setCurrentProjectShown={setCurrentProjectShown}/></div>
+            currentProjectShown != null && <div className={styles['project-card']} style={{marginLeft: currentProjectShown != null ? `${showScroll()}px` : "0px"}}><ProjectCard project={currentProjectShown - 1} setCurrentProjectShown={setCurrentProjectShown}/></div>
           }
         </div>
     </>

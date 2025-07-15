@@ -1,23 +1,27 @@
 {
     "header": {
         "aboutMe": "Over mij",
-        "projects": "Projects",
-        "skills": "Skills",
+        "projects": "Projecten",
+        "skills": "Vaardigheden",
         "contact": "Contact"
     },
     "app": {
-        "fullStackDeveloper": "FULL STACK DEVELOPER",
+        "fullStackDeveloper": "FULL STACK APPLICATIE ONTWIKKELAAR",
         "qualities": {
-            "teamwork": "TEAMWORK",
-            "eagerToLearn": "EAGER TO LEARN",
-            "independent": "INDEPENDENT"
+            "teamwork": "SAMENWERKING",
+            "eagerToLearn": "LEERGIERIG",
+            "independent": "ZELFSTANDIG"
         },
-        "aboutMe": "I am a full stack developer pursuing an associate degree at HoGent (Ghent college) because I'm passionate about coding, algorithms and IT. Especially finding new challenges everyday and overcoming them drives me to learn more. Specialised in C# (.NET), Java, JavaScript (React & Node.js) and MySQL/Microsoft SQL Server/MongoDB.",
-        "internship": "Currently looking for an internship (based in the East Flanders) for the period September 2025 - January 2026.",
+        "aboutMe": "Full-stack developer, studerende aan de HoGent (Hogeschool Gent) om het diploma graduaat Programmeren te gehalen omdat ik een passie heb voor programmeren, algoritmen en IT. Elke dag nieuwe uitdagingen tegenkomen en overwinnen motiveert me om bij te leren. Ik ben gespecialiseerd in C# (.NET), Java, JavaScript (React & Node.js) en MySQL/Microsoft SQL Server/MongoDB.",
+        "internship": "Momenteel beschikbaar voor een stage (gevestigd in Oost-Vlaanderen) voor de periode September 2025 - January 2026.",
         "officeInstructions": {
-            "instruction": "Click on the different elements to explore past code projects",
-            "buttonOfficeView": "Office view",
-            "normalListView": "Normal list view"
+            "instruction": "Klik op de verschillende elementen om afgelopen programmeer projecten te ontdekken",
+            "buttonOfficeView": "Kantoor weergave",
+            "normalListView": "Normale lijst weergave"
+        },
+        "other": "Andere",
+        "footer": {
+            "developedBy": "Ontwikkeld door Iris Van Damme"
         }
     }
 }

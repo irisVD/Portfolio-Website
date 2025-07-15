@@ -1,20 +1,12 @@
 import React, { useEffect, useState} from 'react';
 import styles from "./ProjectCard.module.scss";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { useTranslation } from 'react-i18next';
 
 interface ProjectCardProps {
   // is null when shown ProjectCard is shown in list view
   setCurrentProjectShown: ((value: number | null) => void) | null;
-  project: Project;
-}
-interface Project {
-  title: string,
-  image: string,
-  description: string,
-  backend: string,
-  frontend: string,
-  database: string,
-  extra: string
+  project: number;
 }
 
 const ProjectCard = (props : ProjectCardProps) => {
@@ -22,7 +14,10 @@ const ProjectCard = (props : ProjectCardProps) => {
 
   useEffect(() => {
     setTimeout(() => setVisible(true), 100);
+
   }, []);
+
+  const {t} = useTranslation(["global", "projects", "skills"]);
 
   return (
     <div className={`${styles['this-project-card']} ${props.setCurrentProjectShown ? styles['this-office-project-card'] : styles['this-list-project-card']}`} 
@@ -42,22 +37,22 @@ const ProjectCard = (props : ProjectCardProps) => {
           <IoIosCloseCircleOutline  className={styles['close-icon']} size = {30}/>
       </button>
       <div className={styles['project-content']}>
-        <h1>{props.project.title}</h1>
-        <img src={props.project.image} alt={`image ${props.project.title}`}/>
-        <p>{props.project.description}</p>
+        <h1>{t(`allProjects.${props.project}.title`, {ns:"projects"})}</h1>
+        <img src={t(`allProjects.${props.project}.image`, {ns:"projects"})} alt={`image ${t("title", {ns:"projects"})}`}/>
+        <p>{t(`allProjects.${props.project}.description`, {ns:"projects"})}</p>
         <p className={styles['specs']}>
           <span>Backend: </span>
-          <span>{props.project.backend}</span>
+          <span>{t(`allProjects.${props.project}.backend`, {ns:"projects"})}</span>
         </p>
         <p className={styles['specs']}>
           <span>Frontend: </span>
-          <span>{props.project.frontend}</span>
+          <span>{t(`allProjects.${props.project}.frontend`, {ns:"projects"})}</span>
         </p>
         <p className={styles['specs']}>
           <span>Database: </span>
-          <span>{props.project.database}</span>
+          <span>{t(`allProjects.${props.project}.database`, {ns:"projects"})}</span>
         </p>
-        <p>{props.project.extra}</p>
+        <p>{t(`allProjects.${props.project}.extra`, {ns:"projects"})}</p>
       </div>
     </div>
   )

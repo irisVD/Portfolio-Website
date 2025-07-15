@@ -1,20 +1,22 @@
-[
-    {
-        "title": "NimbleIt",
-        "image": "../../nimbleit.png",
-        "description": "Nimble-it is a web application that helps you organise & maintain your pantry and save recipes.\nThe user gets notifications for products that are nearing the expiration date and show recipes with products near expiration date.\n\nLook for recipes with ingredients you have in your pantry already. If you make the recipe, with one click you can subtract the needed ingredients from your inventory.",
-        "backend": "C# (.NET, ASP.NET)",
-        "frontend": "React",
-        "database": "MySQL database and Azure blob storage",
-        "extra": "Built by William, Louis, Abdil, Lucca & Iris"
-    },
-    {
-        "title": "InterieurSim",
-        "image": "../../interieursim.png",
-        "description": "InterieurSim is a web application that lets you design a custom interior.\nThis application is build for people that moved to a new place and cannot imagine where to put their interior. In InterieurSim you can put either the installed products or your own products in an empty room to create an interior organisation that suits your requirements.",
-        "backend": "C# (.NET, ASP.NET) using Identity Server",
-        "frontend": "React",
-        "database": "Azure Cosmos db and Azure blob storage",
-        "extra": ""
-    }
-]
+{
+    "allProjects":[
+        {
+            "title": "NimbleIt",
+            "image": "../../nimbleit.png",
+            "description": "Nimble-it is a web application that helps you organise & maintain your pantry and save recipes.\nThe user gets notifications for products that are nearing the expiration date and show recipes with products near expiration date.\n\nLook for recipes with ingredients you have in your pantry already. If you make the recipe, with one click you can subtract the needed ingredients from your inventory.",
+            "backend": "C# (.NET, ASP.NET)",
+            "frontend": "React",
+            "database": "MySQL database and Azure blob storage",
+            "extra": "Built by William, Louis, Abdil, Lucca & Iris"
+        },
+        {
+            "title": "InterieurSim",
+            "image": "../../interieursim.png",
+            "description": "InterieurSim is a web application that lets you design a custom interior.\nThis application is build for people that moved to a new place and cannot imagine where to put their interior. In InterieurSim you can put either the installed products or your own products in an empty room to create an interior organisation that suits your requirements.",
+            "backend": "C# (.NET, ASP.NET) using Identity Server",
+            "frontend": "React",
+            "database": "Azure Cosmos db and Azure blob storage",
+            "extra": ""
+        }
+    ]
+}

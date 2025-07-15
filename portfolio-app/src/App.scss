@@ -17,6 +17,7 @@ h1 {
 }
 .darkmode {
     margin-right: 1em;
+    align-self: center;
     .moon-icon, .sun-icon {
         margin: 0.25em;
     }
@@ -29,14 +30,20 @@ h1 {
 }
 
 .languages {
-    display: flex;
-    button > * {
+    align-self: center;
+    button {
+        > * {
         width: 24px;
         height: 16px;
+        }
+        &:first-child {
+            border-right: 1px solid black;
+        }
+        svg {
+            margin: 0.25em 0.5em;
+        }
     }
-    svg {
-        margin: 0.25em 0.5em;
-    }
+
 }
 h2, h3 {
     font-family: "Euphemia UCAS", Arial;
