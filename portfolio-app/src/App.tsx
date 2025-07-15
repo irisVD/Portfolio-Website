@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Office from './components/Office';
 import { useEffect, useState } from 'react';
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
-import DottedLine from './DottedLine';
+import DottedLine from './components/DottedLine';
 import skills from './translations/en/skills_en.json';
 import React from 'react';
 import { IoIosMail } from "react-icons/io";

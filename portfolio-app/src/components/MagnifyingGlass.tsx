@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "./Office.module.scss";
 
 interface MagnifyingGlassProps {

@@ -1,4 +1,3 @@
-import React from 'react';
 import "../App.scss";
 import { AiOutlineMoon } from "react-icons/ai";
 import { AiOutlineSun } from "react-icons/ai";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import { useEffect, useState} from 'react';
 import styles from "./ProjectCard.module.scss";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useTranslation } from 'react-i18next';
