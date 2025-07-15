@@ -1,0 +1,23 @@
+{
+    "header": {
+        "aboutMe": "Over mij",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact"
+    },
+    "app": {
+        "fullStackDeveloper": "FULL STACK DEVELOPER",
+        "qualities": {
+            "teamwork": "TEAMWORK",
+            "eagerToLearn": "EAGER TO LEARN",
+            "independent": "INDEPENDENT"
+        },
+        "aboutMe": "I am a full stack developer pursuing an associate degree at HoGent (Ghent college) because I'm passionate about coding, algorithms and IT. Especially finding new challenges everyday and overcoming them drives me to learn more. Specialised in C# (.NET), Java, JavaScript (React & Node.js) and MySQL/Microsoft SQL Server/MongoDB.",
+        "internship": "Currently looking for an internship (based in the East Flanders) for the period September 2025 - January 2026.",
+        "officeInstructions": {
+            "instruction": "Click on the different elements to explore past code projects",
+            "buttonOfficeView": "Office view",
+            "normalListView": "Normal list view"
+        }
+    }
+}

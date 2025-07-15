@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import styles from "./Office.module.scss";
 import ProjectCard from "./ProjectCard";
 import MagnifyingGlass from './MagnifyingGlass';
-import projects from "../../projects.json";
+import projects from "../translations/en/projects_en.json";
 
 const Office = () => {
     const [currentProjectShown, setCurrentProjectShown] = useState<number | null>(null);

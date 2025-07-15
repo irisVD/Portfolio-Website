@@ -4,12 +4,21 @@ import { AiOutlineMoon } from "react-icons/ai";
 import { AiOutlineSun } from "react-icons/ai";
 import GB from 'country-flag-icons/react/3x2/GB';
 import NL from 'country-flag-icons/react/3x2/NL';
+import { useTranslation } from 'react-i18next';
 
 interface HeaderProps{
   setDarkMode: (value: boolean) => void;
 }
 
+
+
 const Header = (props : HeaderProps) => {
+  const [t, i18n] = useTranslation("global");
+
+  const handleChangeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <>
         <div className='title-part'>
@@ -26,13 +35,20 @@ const Header = (props : HeaderProps) => {
                 <AiOutlineSun size={24} className='sun-icon'/>
               </button>
             </div>
-            <div className='languages'><GB />/<NL /></div>
+            <div className='languages'>
+              <button
+                onClick={() => handleChangeLanguage("en")}
+              ><GB /></button>/
+              <button
+                onClick={() => handleChangeLanguage("nl")}
+              ><NL /></button>
+            </div>
           </div>
           
         </div>
         
         <div className="menu">
-          <div>About me</div>
+          <div>{t("header.aboutMe")}</div>
           <div>Projects</div>
           <div>Skills</div>
           <div>Contact</div>

@@ -5,16 +5,19 @@ import Office from './components/Office';
 import { useEffect, useState } from 'react';
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import DottedLine from './DottedLine';
-import skills from '../skills.json';
+import skills from './translations/en/skills_en.json';
 import React from 'react';
 import { IoIosMail } from "react-icons/io";
-import projects from "../projects.json";
+import projects from "./translations/en/projects_en.json";
 import ProjectCard from './components/ProjectCard';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false)
   const [isListView, setIsListView] = useState(false);
   const [darkmode, setDarkMode] = useState(false);
+
+  const [t] = useTranslation("global");
 
   //choose the screen size 
   const handleResize = () => {
@@ -32,6 +35,7 @@ function App() {
   return (
     <div className="app" data-theme={darkmode ? "dark" : "light"}>
       <Header setDarkMode={setDarkMode}/>
+      
       <div className='me-card'>
         <div>
           <p>FULL STACK DEVELOPER</p>
@@ -42,10 +46,12 @@ function App() {
         {isMobile ? <p className='iris-name'>Iris Van Damme</p> : <></>}
       </div>
       <div className='qualities'>
-        <p>TEAMWORK</p>
+        <p>{t("app.qualities.teamwork")}</p>
         <p>EAGER TO LEARN</p>
         <p>INDEPENDENT</p>
       </div>
+
+      {/* ABOUT ME */}
       <div className='about-me'>
         <div style={{display: "flex", alignItems: "center"}}><h3>About me</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
         <p>
@@ -58,6 +64,7 @@ function App() {
       </div>
 
       <DottedLine />
+      {/* PROJECTS */}
       <div className='h2-title'><h2>Projects</h2><IoIosArrowDown size={30}/></div>
 
       <div className='office-instructions'>
@@ -76,6 +83,7 @@ function App() {
     
 
       <DottedLine />
+      {/* SKILLS */}
       <div className='h2-title'><h2>Skills</h2><IoIosArrowDown size={30}/></div>
 
       <div className="skills">
@@ -92,7 +100,8 @@ function App() {
           }}
         ><p style={{marginRight: "0.75em", color: "black"}}>Mail me</p><IoIosMail /></button>
       </div>
-
+      
+      {/* FOOTER */}
       <div className='footer'>Developed by Iris Van Damme</div>
     </div>
   )
