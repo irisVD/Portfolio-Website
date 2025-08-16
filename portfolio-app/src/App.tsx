@@ -63,10 +63,10 @@ function App() {
       <div className='h2-title'><h2>{t("header.projects")}</h2><IoIosArrowDown size={30} id="projects"/></div>
 
       <div className='office-instructions'>
-        {!isListView && <p>Click on the different elements to explore past code projects</p>}
+        {!isListView && <p>{t("app.officeInstructions.instruction")}</p>}
         <button className='green-button' style={{marginRight: "0px", marginLeft: "auto"}}
           onClick={() => setIsListView(!isListView)}>
-            {isListView ? "Office view" : "Normal list view"}
+            {isListView ? `${t("app.officeInstructions.buttonOfficeView")}` : `${t("app.officeInstructions.normalListView")}`}
         </button>
       </div>
       
