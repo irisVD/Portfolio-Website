@@ -59,15 +59,26 @@ h3 {
 .menu {
     div {
         font-family: "Euphemia UCAS", Arial;
-        margin: 1em 0;
+        margin: 1em 3%;
         padding-bottom: 0.4em;
         border-bottom: 1px solid rgb(var(--accent-text-default-background));
+        &:hover {
+            border-bottom: 1px solid rgba(var(--accent-text-default-background), 0.8);
+        }
     }
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    margin-left: 3%;
     margin-bottom: 2em;
     background-color: rgba(var(--secundary-color), 0.2);
     padding: 0 7%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        color: rgba(var(--accent-text-default-background), 0.8);
+    }
 }
 .me-card {
     width: 80%;
@@ -216,6 +227,9 @@ h3 {
 @media only screen and (max-width: 720px) {
     .title-part {
         flex-direction: column-reverse;
+    }
+    .menu {
+        margin-left: 0;
     }
     .me-card {
         display: block;

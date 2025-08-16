@@ -47,10 +47,10 @@ const Header = (props : HeaderProps) => {
         </div>
         
         <div className="menu">
-          <div>{t("header.aboutMe")}</div>
-          <div>{t("header.projects")}</div>
-          <div>{t("header.skills")}</div>
-          <div>{t("header.contact")}</div>
+          <div><a href="#about-me">{t("header.aboutMe")}</a></div>
+          <div><a href="#projects">{t("header.projects")}</a></div>
+          <div><a href="#skills">{t("header.skills")}</a></div>
+          <div><a href="#contact">{t("header.contact")}</a></div>
         </div>
     </>
     

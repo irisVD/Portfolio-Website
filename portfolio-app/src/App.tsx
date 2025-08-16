@@ -52,7 +52,7 @@ function App() {
       </div>
 
       {/* ABOUT ME */}
-      <div className='about-me'>
+      <div className='about-me' id="about-me">
         <div style={{display: "flex", alignItems: "center"}}><h3>{t("header.aboutMe")}</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
         <p>{t("app.aboutMe")}</p>
         <p style={{fontWeight: "600"}}>{t("app.internship")}</p>
@@ -60,7 +60,7 @@ function App() {
 
       <DottedLine />
       {/* PROJECTS */}
-      <div className='h2-title'><h2>{t("header.projects")}</h2><IoIosArrowDown size={30}/></div>
+      <div className='h2-title'><h2>{t("header.projects")}</h2><IoIosArrowDown size={30} id="projects"/></div>
 
       <div className='office-instructions'>
         {!isListView && <p>Click on the different elements to explore past code projects</p>}
@@ -83,14 +83,14 @@ function App() {
 
       <DottedLine />
       {/* SKILLS */}
-      <div className='h2-title'><h2>{t("header.skills")}</h2><IoIosArrowDown size={30}/></div>
+      <div className='h2-title'><h2>{t("header.skills")}</h2><IoIosArrowDown size={30} id="skills"/></div>
 
       <div className="skills">
         {Object.entries(skills).map(([k, v]) => <React.Fragment key={k}><div>{k}</div><div className='skill-value'>{v}</div></React.Fragment>)}
       </div>
       
       <DottedLine />
-      <div className='about-me contact' style={{display: "flex", alignItems: "center"}}>
+      <div className='about-me contact' style={{display: "flex", alignItems: "center"}} id="contact">
         <div style={{display: "flex", alignItems: "baseline", marginRight: "15%"}}><h3>{t("header.contact")}</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
         <button className="green-button" style={{display: "flex", alignItems: "center"}}
           onClick={() => {
