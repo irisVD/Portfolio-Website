@@ -60,7 +60,7 @@ function App() {
 
       <DottedLine />
       {/* PROJECTS */}
-      <div className='h2-title'><h2>{t("header.projects")}</h2><IoIosArrowDown size={30} id="projects"/></div>
+      <div className='h2-title fade-in'><h2>{t("header.projects")}</h2><IoIosArrowDown size={30} id="projects"/></div>
 
       <div className='office-instructions'>
         {!isListView && <p>{t("app.officeInstructions.instruction")}</p>}
@@ -70,10 +70,10 @@ function App() {
         </button>
       </div>
       
-      {!isListView ? <Office /> :
+      {!isListView ? <div className='fade-in'><Office /></div> :
         <div className='project-list'>
           {[...Array(projects.allProjects.length)].map((_, i) => (
-            <div key={i} className='project-list-item'>
+            <div key={i} className='project-list-item fade-in'>
               <ProjectCard project={i} setCurrentProjectShown={null} />
             </div>
           ))}
@@ -86,11 +86,11 @@ function App() {
       <div className='h2-title'><h2>{t("header.skills")}</h2><IoIosArrowDown size={30} id="skills"/></div>
 
       <div className="skills">
-        {Object.entries(skills).map(([k, v]) => <React.Fragment key={k}><div>{k}</div><div className='skill-value'>{v}</div></React.Fragment>)}
+        {Object.entries(skills).map(([k, v]) => <React.Fragment key={k}><div className='fade-in'>{k}</div><div className='skill-value fade-in'>{v}</div></React.Fragment>)}
       </div>
       
       <DottedLine />
-      <div className='about-me contact' style={{display: "flex", alignItems: "center"}} id="contact">
+      <div className='about-me contact fade-in' style={{display: "flex", alignItems: "center"}} id="contact">
         <div style={{display: "flex", alignItems: "baseline", marginRight: "15%"}}><h3>{t("header.contact")}</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
         <button className="green-button" style={{display: "flex", alignItems: "center"}}
           onClick={() => {
