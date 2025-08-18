@@ -54,7 +54,7 @@ const ProjectCard = (props : ProjectCardProps) => {
           <span>{t(`allProjects.${props.project}.database`, {ns:"projects"})}</span>
         </p>
         <p>{t(`allProjects.${props.project}.extra`, {ns:"projects"})}</p>
-        <a href={t(`allProjects.${props.project}.link`, {ns:"projects"})}>{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</a>
+        <a href={t(`allProjects.${props.project}.link`, {ns:"projects"})} target="_blank" rel="noopener noreferrer">{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</a>
       </div>
     </div>
   )

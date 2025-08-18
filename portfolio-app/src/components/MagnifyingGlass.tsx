@@ -11,7 +11,7 @@ interface MagnifyingGlassProps {
 
 const MagnifyingGlass = (props : MagnifyingGlassProps) => {
   return (
-    <button className={`${styles["magnifying-glass"]}`} style={{top: `${props.topPosition}px`, left: `${props.leftPosition}px`}}
+    <button className={`${styles["magnifying-glass"]}`} style={{top: `${props.topPosition}px`, left: `${props.leftPosition}px`, zIndex: "100"}}
         onClick={() => 
         {
             props.setCurrentProjectShown(props.id);
