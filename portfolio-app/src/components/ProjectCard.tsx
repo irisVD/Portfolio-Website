@@ -39,6 +39,7 @@ const ProjectCard = (props : ProjectCardProps) => {
       <div className={styles['project-content']}>
         <h1>{t(`allProjects.${props.project}.title`, {ns:"projects"})}</h1>
         <img src={t(`allProjects.${props.project}.image`, {ns:"projects"})} alt={`image ${t("title", {ns:"projects"})}`}/>
+
         <p>{t(`allProjects.${props.project}.description`, {ns:"projects"})}</p>
         <p className={styles['specs']}>
           <span>Backend: </span>
@@ -53,6 +54,7 @@ const ProjectCard = (props : ProjectCardProps) => {
           <span>{t(`allProjects.${props.project}.database`, {ns:"projects"})}</span>
         </p>
         <p>{t(`allProjects.${props.project}.extra`, {ns:"projects"})}</p>
+        <a href={t(`allProjects.${props.project}.link`, {ns:"projects"})}>{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</a>
       </div>
     </div>
   )

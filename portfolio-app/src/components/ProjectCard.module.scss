@@ -3,9 +3,10 @@
     line-height: 1.5em;
     background-color: var(--my-background-color);
     border-radius: 10px;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     h1 {
         padding: 0.75em 0;
+        line-height: 110%;
     }
 
     .project-content {
@@ -22,12 +23,23 @@
         span:first-child {
             font-weight: 600;
         }
+        a {
+            display: inline-block;
+            background-color: rgba($color: var(--primary-color), $alpha: 1);
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            font-weight: bold;
+            margin-top: 1em;
+            &:hover {
+                background-color: rgba($color: var(--button-hover), $alpha: 0.8);
+            }
+        }
     }
 }
 .this-office-project-card {
-    height: 620px;
+    height: 520px;
     overflow-y: scroll;
-    h1, p {
+    h1, p, a {
         margin-left: calc(20% - 2rem);
         margin-right: calc(20% - 2rem);
     }
@@ -44,7 +56,6 @@
             }
         }
     }
-
 }
 .this-list-project-card {
     width: 60%;
@@ -52,7 +63,7 @@
     margin-right: auto;
     padding-bottom: 3em;
     padding-top: 1em;
-    h1, p {
+    h1, div {
         width: 60%;
         margin-left: auto;
         margin-right: auto;

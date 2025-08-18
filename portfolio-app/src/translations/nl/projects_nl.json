@@ -1,13 +1,15 @@
 {
     "allProjects":[
         {
-            "title": "NimbleIt",
-            "image": "../../nimbleit.png",
-            "description": "Nimble-it is een webapplicatie die je helpt je voorraadkast te organiseren, te onderhouden en recepten op te slaan. \nDe gebruiker ontvangt meldingen voor producten die bijna over de datum zijn en toont recepten met producten die bijna over de datum zijn. \n\nZoek naar recepten met ingrediënten die je al in je voorraadkast hebt staan. Als je het recept maakt, kun je met één klik de benodigde ingrediënten uit je voorraad halen.",
+            "title": "Voedselvoorraad",
+            "image": "../../voedselvoorraad.jpg",
+            "description": "Voedselvoorraad is een webapplicatie die je helpt je voorraadkast te organiseren, te onderhouden en recepten op te slaan. \nDe gebruiker ontvangt meldingen voor producten die bijna over de datum zijn en toont recepten met producten die bijna over de datum zijn. \n\nZoek naar recepten met ingrediënten die je al in je voorraadkast hebt staan. Als je het recept maakt, kun je met één klik de benodigde ingrediënten uit je voorraad halen.",
             "backend": "C# (.NET, ASP.NET)",
             "frontend": "React",
             "database": "MySQL database and Azure blob storage",
-            "extra": "Ontwikkeld door William, Louis, Abdil, Lucca & Iris"
+            "extra": "Ontwikkeld door William, Louis, Abdil, Lucca & Iris",
+            "link": "https://www.voedselvoorraad-irisvandamme.be/",
+            "linkText": "Bekijk project"
         },
         {
             "title": "InterieurSim",

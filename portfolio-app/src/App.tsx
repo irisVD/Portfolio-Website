@@ -60,7 +60,7 @@ function App() {
 
       <DottedLine />
       {/* PROJECTS */}
-      <div className='h2-title fade-in'><h2>{t("header.projects")}</h2><IoIosArrowDown size={30} id="projects"/></div>
+      <div className='h2-title fade-in'><h2 id="projects">{t("header.projects")}</h2><IoIosArrowDown size={30}/></div>
 
       <div className='office-instructions'>
         {!isListView && <p>{t("app.officeInstructions.instruction")}</p>}
@@ -83,7 +83,7 @@ function App() {
 
       <DottedLine />
       {/* SKILLS */}
-      <div className='h2-title'><h2>{t("header.skills")}</h2><IoIosArrowDown size={30} id="skills"/></div>
+      <div className='h2-title'><h2 id="skills">{t("header.skills")}</h2><IoIosArrowDown size={30}/></div>
 
       <div className="skills">
         {Object.entries(skills).map(([k, v]) => <React.Fragment key={k}><div className='fade-in'>{k}</div><div className='skill-value fade-in'>{v}</div></React.Fragment>)}
