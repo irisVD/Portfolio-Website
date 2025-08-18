@@ -5,11 +5,10 @@ import GB from 'country-flag-icons/react/3x2/GB';
 import NL from 'country-flag-icons/react/3x2/NL';
 import { useTranslation } from 'react-i18next';
 
-interface HeaderProps{
+interface HeaderProps {
+  darkMode: boolean;
   setDarkMode: (value: boolean) => void;
 }
-
-
 
 const Header = (props : HeaderProps) => {
   const [t, i18n] = useTranslation(["global", "projects", "skills"]);

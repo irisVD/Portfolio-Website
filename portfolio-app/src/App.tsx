@@ -1,6 +1,5 @@
 import './App.scss';
 import './_shared.scss';
-import Header from './components/Header';
 import Office from './components/Office';
 import { useEffect, useState } from 'react';
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
@@ -11,11 +10,14 @@ import { IoIosMail } from "react-icons/io";
 import projects from "./translations/en/projects_en.json";
 import ProjectCard from './components/ProjectCard';
 import { useTranslation } from 'react-i18next';
+import Footer from './components/Footer';
+import { useOutletContext } from 'react-router-dom';
 
-function App() {
+
+const App = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [isListView, setIsListView] = useState(false);
-  const [darkmode, setDarkMode] = useState(false);
+  const { darkMode } = useOutletContext<{ darkMode: boolean }>() || {};
 
   const [t] = useTranslation("global");
 
@@ -33,8 +35,7 @@ function App() {
     window.addEventListener("resize", handleResize)
   })
   return (
-    <div className="app" data-theme={darkmode ? "dark" : "light"}>
-      <Header setDarkMode={setDarkMode}/>
+    <div className="app" data-theme={darkMode ? "dark" : "light"}>
       
       <div className='me-card'>
         <div>
@@ -101,7 +102,7 @@ function App() {
       </div>
       
       {/* FOOTER */}
-      <div className='footer'>Developed by Iris Van Damme</div>
+      <Footer />
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { useEffect, useState} from 'react';
 import styles from "./ProjectCard.module.scss";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
   // is null when shown ProjectCard is shown in list view
@@ -54,7 +55,15 @@ const ProjectCard = (props : ProjectCardProps) => {
           <span>{t(`allProjects.${props.project}.database`, {ns:"projects"})}</span>
         </p>
         <p>{t(`allProjects.${props.project}.extra`, {ns:"projects"})}</p>
-        <a href={t(`allProjects.${props.project}.link`, {ns:"projects"})} target="_blank" rel="noopener noreferrer">{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</a>
+        {
+          t(`allProjects.${props.project}.title`, {ns:"projects"}) == "Voedselvoorraad (Food pantry)" ||
+          t(`allProjects.${props.project}.title`, {ns:"projects"}) == "Voedselvoorraad"
+          ?
+          <a href={t(`allProjects.${props.project}.link`, {ns:"projects"})} target="_blank" rel="noopener noreferrer">{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</a>
+          :
+          <Link to={t(`allProjects.${props.project}.link`, {ns:"projects"})}>{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</Link>
+        }
+        
       </div>
     </div>
   )

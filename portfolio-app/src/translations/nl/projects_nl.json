@@ -18,7 +18,9 @@
             "backend": "C# (.NET, ASP.NET) using Identity Server",
             "frontend": "React",
             "database": "Azure Cosmos db and Azure blob storage",
-            "extra": ""
+            "extra": "",
+            "link": "/interieursim",
+            "linkText": "Leer meer"
         }
     ]
 }

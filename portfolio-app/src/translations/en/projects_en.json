@@ -19,8 +19,8 @@
             "frontend": "React",
             "database": "Azure Cosmos db and Azure blob storage",
             "extra": "",
-            "link": "",
-            "linkText": ""
+            "link": "/interieursim",
+            "linkText": "Learn more"
         }
     ]
 }

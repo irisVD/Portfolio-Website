@@ -10,6 +10,9 @@ import global_en from "./translations/en/global_en.json";
 import global_nl from "./translations/nl/global_nl.json";
 import projects_en from "./translations/en/projects_en.json";
 import projects_nl from "./translations/nl/projects_nl.json";
+import RootLayout from './layouts/RootLayout.tsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import InterieurSimPage from './pages/InterieurSimPage.tsx';
 
 i18next.init({
   interpolation: {escapeValue: false}, // emitigate attacks,
@@ -26,10 +29,27 @@ i18next.init({
   }
 })
 
+const browserRouter = createBrowserRouter([
+  {
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "/interieursim",
+        element: <InterieurSimPage />,
+      },
+    ],
+  },
+
+]);
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <I18nextProvider i18n={i18next}>
-      <App />
+      <RouterProvider router={browserRouter} />
     </I18nextProvider>
   </StrictMode>,
 )

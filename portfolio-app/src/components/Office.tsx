@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import styles from "./Office.module.scss";
 import ProjectCard from "./ProjectCard";
 import MagnifyingGlass from './MagnifyingGlass';
+import { useOutletContext } from 'react-router-dom';
 
 const Office = () => {
     const [currentProjectShown, setCurrentProjectShown] = useState<number | null>(null);
@@ -9,6 +10,7 @@ const Office = () => {
     const [topOffset, setTopOffset] = useState<number | null>(null);
     const roomContainerRef = useRef<HTMLDivElement>(null);
     const [lightOn, setLightOn] = useState<boolean>(false);
+    const { darkMode } = useOutletContext<{ darkMode: boolean}>();
 
     // hardcoded because there will never be a lot of magnifying glasses
     const topPositionMagnGlass1 = 350;
@@ -73,8 +75,8 @@ const Office = () => {
             <img src="../../public/bike.png" alt="bike"
                 className={styles['bike']}
             />
-            <img src="../../public/window.jpg" alt="window"
-                className={styles['window']}
+            <img src="../../public/window.png" alt="window"
+                className={styles['window']} style={{backgroundColor: darkMode ? "rgb(45, 53, 73)" : "rgb(168, 219, 233)"}}
             />
             <img src="../../public/lamp.png" alt="table-lamp"
                 className={styles['lamp']}
