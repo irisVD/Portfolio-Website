@@ -37,12 +37,13 @@
             border-radius: 5px;
             padding: 0.5em 1em;
             font-weight: bold;
-            margin-top: 1em;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+            color: black;
             &:hover {
                 background-color: rgba($color: var(--button-hover), $alpha: 0.8);
                 animation-name: buttonHoverScale;
                 animation-duration: 0.5s;
-                color: black;
             }
         }
     }
