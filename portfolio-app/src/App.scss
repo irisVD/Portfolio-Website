@@ -206,6 +206,7 @@ a {
     padding: 1em;
     border-radius: 5px;
     font-size: 14px;
+    font-weight: bold;
     &:hover {
         background-color: rgba($color: var(--button-hover), $alpha: 0.8);
     }
