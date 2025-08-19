@@ -86,7 +86,7 @@ const App = () => {
       <div className='h2-title'><h2 id="skills">{t("header.skills")}</h2><IoIosArrowDown size={30}/></div>
 
       <div className="skills">
-        {[...Array(Object.keys(skills).length/2)].map((_, i) => <React.Fragment key={i}><div className='fade-in'>{t(`Cat${i+1}`, {ns:"skills"})}</div><div className='skill-value fade-in' style={{borderColor: darkMode? "white" : "black"}}>{t(`Skills${i+1}`, {ns:"skills"})}</div></React.Fragment>)}
+        {[...Array(Object.keys(skills).length/2)].map((_, i) => <React.Fragment key={i}><div className='fade-in'>{t(`Cat${i+1}`, {ns:"skills"})}</div><div className='skill-value fade-in'>{t(`Skills${i+1}`, {ns:"skills"})}</div></React.Fragment>)}
       </div>
       
       <DottedLine />

@@ -46,7 +46,7 @@ button {
 
 .languages, .darkmode {
     div {
-        border-right: 1px solid black;
+        border-right: 1px solid rgb(var(--accent-text-default-background));
         width: 1px;
         height: 25px;
     }
@@ -232,7 +232,7 @@ a {
             padding-right: 2em;
         }
         &:nth-of-type(2n) {
-            border-left: 1px solid black;
+            border-left: 1px solid rgb(var(--accent-text-default-background));
             padding-left: 2em;
         }
     }
