@@ -20,6 +20,9 @@
             "normalListView": "Normal list view"
         },
         "other": "Other",
+        "contact": {
+            "mailButton": "Mail me"
+        },
         "footer": {
             "developedBy": "Developed by Iris Van Damme"
         }

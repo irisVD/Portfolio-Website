@@ -3,8 +3,8 @@
     "Skills1": "React, TypeScript/JavaScript, HTML, (S)CSS, WPF, JavaFX",
     "Cat2": "Back-End",
     "Skills2": "C# (.NET, ASP.NET), REST api, Node.js, Java",
-    "Cat3": "Database Management",
+    "Cat3": "Database beheer",
     "Skills3": "MySQL, SQL Server, MongoDB, Azure Blob, Azure Cosmos",
-    "Cat4": "Other",
+    "Cat4": "Andere",
     "Skills4": "Git, Devops, UML"
 }

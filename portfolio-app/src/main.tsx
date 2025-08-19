@@ -10,6 +10,8 @@ import global_en from "./translations/en/global_en.json";
 import global_nl from "./translations/nl/global_nl.json";
 import projects_en from "./translations/en/projects_en.json";
 import projects_nl from "./translations/nl/projects_nl.json";
+import skills_en from "./translations/en/skills_en.json";
+import skills_nl from "./translations/nl/skills_nl.json";
 import RootLayout from './layouts/RootLayout.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import InterieurSimPage from './pages/InterieurSimPage.tsx';
@@ -20,11 +22,13 @@ i18next.init({
   resources: {
     en: {
       global: global_en,
-      projects: projects_en
+      projects: projects_en,
+      skills: skills_en
     },
     nl: {
       global: global_nl,
-      projects: projects_nl
+      projects: projects_nl,
+      skills: skills_nl
     }
   }
 })

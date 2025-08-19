@@ -10,7 +10,6 @@ import { IoIosMail } from "react-icons/io";
 import projects from "./translations/en/projects_en.json";
 import ProjectCard from './components/ProjectCard';
 import { useTranslation } from 'react-i18next';
-import Footer from './components/Footer';
 import { useOutletContext } from 'react-router-dom';
 
 
@@ -19,7 +18,7 @@ const App = () => {
   const [isListView, setIsListView] = useState(false);
   const { darkMode } = useOutletContext<{ darkMode: boolean }>() || {};
 
-  const [t] = useTranslation("global");
+  const {t} = useTranslation(["global", "projects", "skills"]);
 
   //choose the screen size 
   const handleResize = () => {
@@ -87,7 +86,7 @@ const App = () => {
       <div className='h2-title'><h2 id="skills">{t("header.skills")}</h2><IoIosArrowDown size={30}/></div>
 
       <div className="skills">
-        {Object.entries(skills).map(([k, v]) => <React.Fragment key={k}><div className='fade-in'>{k}</div><div className='skill-value fade-in'>{v}</div></React.Fragment>)}
+        {[...Array(Object.keys(skills).length/2)].map((_, i) => <React.Fragment key={i}><div className='fade-in'>{t(`Cat${i+1}`, {ns:"skills"})}</div><div className='skill-value fade-in'>{t(`Skills${i+1}`, {ns:"skills"})}</div></React.Fragment>)}
       </div>
       
       <DottedLine />
@@ -98,11 +97,8 @@ const App = () => {
             const mailLink = `mailto:irisvandamme@live.com`;
             window.location.href = mailLink;
           }}
-        ><p style={{marginRight: "0.75em", color: "black"}}>Mail me</p><IoIosMail /></button>
+        ><p style={{marginRight: "0.75em", color: "black"}}>{t("app.contact.mailButton")}</p><IoIosMail /></button>
       </div>
-      
-      {/* FOOTER */}
-      <Footer />
     </div>
   )
 }

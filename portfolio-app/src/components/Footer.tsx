@@ -1,8 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const {t} = useTranslation(["global"]);
+
   return (
-    <div className='footer'>Developed by Iris Van Damme</div>
+    <div className='footer'>{t("app.footer.developedBy")}</div>
   )
 }
 
