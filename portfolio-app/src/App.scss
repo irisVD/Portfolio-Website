@@ -7,6 +7,18 @@ body {
 h1 {
     font-family: "Euphemia UCAS", Arial;
 }
+@keyframes buttonHoverScale {
+  0% {scale: 1;}
+  50% {scale: 1.05;}
+  100% {scale: 1;}
+}
+button {
+    &:hover {
+        animation-name: buttonHoverScale;
+        animation-duration: 0.5s;
+        cursor: pointer;
+    }
+}
 .title-part {
     display: flex;
     margin: 0 10% 1em 10%;
@@ -56,6 +68,7 @@ h2 {
 h3 {
     font-size: 20px;
 }
+
 .menu {
     div {
         font-family: "Euphemia UCAS", Arial;
@@ -64,17 +77,14 @@ h3 {
         border-bottom: 1px solid rgb(var(--accent-text-default-background));
         &:hover {
             border-bottom: 1px solid rgba(var(--accent-text-default-background), 0.8);
+            animation-name: buttonHoverScale;
+            animation-duration: 0.5s;
         }
     }
     display: flex;
     justify-content: flex-start;
-    background-color: rgba(var(--secundary-color), 0.2);
+    background-color: rgba(var(--primary-color), 0.2);
     padding: 0 7%;
-}
-.menu-bottom {
-    width: 100%;
-    height: 5px;
-    background-color: rgba(var(--secundary-color), 0.2);
     margin-bottom: 2em;
 }
 

@@ -51,7 +51,6 @@ const Header = (props : HeaderProps) => {
           <div><a href="#skills">{t("header.skills")}</a></div>
           <div><a href="#contact">{t("header.contact")}</a></div>
         </div>
-        <div className="menu-bottom"></div>
     </>
     
   )
