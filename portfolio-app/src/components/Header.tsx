@@ -27,6 +27,7 @@ const Header = (props : HeaderProps) => {
                 onClick={() => props.setDarkMode(true)}>
                 <AiOutlineMoon size={24} className='moon-icon'/>
               </button>
+              <div></div>
               
               <button
                 onClick={() => props.setDarkMode(false)}>
@@ -37,6 +38,7 @@ const Header = (props : HeaderProps) => {
               <button style={{filter: i18n.language == "en" ? "saturate(0.5)" : "saturate(1)"}}
                 onClick={() => handleChangeLanguage("en")}
               ><GB /></button>
+              <div></div>
               <button style={{filter: i18n.language == "nl" ? "saturate(0.5)" : "saturate(1)"}}
                 onClick={() => handleChangeLanguage("nl")}
               ><NL /></button>

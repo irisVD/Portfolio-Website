@@ -29,27 +29,36 @@ button {
 }
 .darkmode {
     margin-right: 1em;
-    align-self: center;
-    .moon-icon, .sun-icon {
+    display: flex;
+    .moon-icon, .sun-icon, div {
         margin: 0.25em;
     }
     .moon-icon {
         color: rgb(var(--moon-icon-color));
+        margin-right: 0;
     }
     .sun-icon {
         color: rgb(var(--sun-icon-color));
+        margin-left: 0;
+    }
+}
+
+.languages, .darkmode {
+    div {
+        border-right: 1px solid black;
+        width: 1px;
+        height: 25px;
     }
 }
 
 .languages {
     align-self: center;
+    margin-left: 2em;
+    display: flex;
     button {
         > * {
         width: 24px;
         height: 16px;
-        }
-        &:first-child {
-            border-right: 1px solid black;
         }
         svg {
             margin: 0.25em 0.5em;
