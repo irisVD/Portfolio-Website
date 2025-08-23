@@ -4,14 +4,17 @@ import { AiOutlineSun } from "react-icons/ai";
 import GB from 'country-flag-icons/react/3x2/GB';
 import NL from 'country-flag-icons/react/3x2/NL';
 import { useTranslation } from 'react-i18next';
+import MenuTopHome from "./MenuTopHome";
+import MenuTopProjectPage from "./MenuTopProjectPage";
 
 interface HeaderProps {
   darkMode: boolean;
   setDarkMode: (value: boolean) => void;
+  pathName: string;
 }
 
 const Header = (props : HeaderProps) => {
-  const [t, i18n] = useTranslation(["global", "projects", "skills"]);
+  const {i18n} = useTranslation(["global", "projects", "skills"]);
 
   const handleChangeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -44,15 +47,8 @@ const Header = (props : HeaderProps) => {
               ><NL /></button>
             </div>
           </div>
-          
         </div>
-        
-        <div className="menu">
-          <div><a href="#about-me">{t("header.aboutMe")}</a></div>
-          <div><a href="#projects">{t("header.projects")}</a></div>
-          <div><a href="#skills">{t("header.skills")}</a></div>
-          <div><a href="#contact">{t("header.contact")}</a></div>
-        </div>
+        {props.pathName == '/' ? <MenuTopHome /> : <MenuTopProjectPage /> }
     </>
     
   )
