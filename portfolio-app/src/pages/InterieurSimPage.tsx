@@ -329,14 +329,14 @@ const codeIdentityServerHostingExtensions =
       <p>{t("frontendOntwikkeling", {ns:"interieursim"})}</p>
 
       <h2>{t("h2HistoriekDevops", {ns:"interieursim"})}</h2>
-      <img src="../../public/devops-backlog.png" alt={t("imgDevops", {ns:"interieursim"})} />
+      <img src="../../devops-backlog.png" alt={t("imgDevops", {ns:"interieursim"})} />
       <p className={styles['image-description']}>{t("imgDevops", {ns:"interieursim"})}</p>
-      <img src="../../public/devops-commits.png" alt={t("imgDevopsCommits", {ns:"interieursim"})} />
+      <img src="../../devops-commits.png" alt={t("imgDevopsCommits", {ns:"interieursim"})} />
       <p className={styles['image-description']}>{t("imgDevopsCommits", {ns:"interieursim"})}</p>
 
       <h2>Product Api</h2>
       <p>{t("communicationWebServ", {ns:"interieursim"})}</p>
-      <img src="../../public/interieursim-systeem.png" alt={t("imgAppArchitecture", {ns:"interieursim"})} />
+      <img src="../../interieursim-systeem.png" alt={t("imgAppArchitecture", {ns:"interieursim"})} />
       <p className={styles['image-description']}>{t("imgAppArchitecture", {ns:"interieursim"})}</p>
       <p>{t("cosmosDb", {ns:"interieursim"})}</p>
       <p>{t("postMethod", {ns:"interieursim"})}</p>
@@ -358,7 +358,7 @@ const codeIdentityServerHostingExtensions =
       <h2>DTOs</h2>
       <p>{t("dtos", {ns:"interieursim"})}</p>
       <p>{t("responseContract", {ns:"interieursim"})}</p>
-      <img src="../../public/DTOs.png" alt={t("imgDtos", {ns:"interieursim"})} />
+      <img src="../../DTOs.png" alt={t("imgDtos", {ns:"interieursim"})} />
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductResponseContract}
       </SyntaxHighlighter>

@@ -57,28 +57,28 @@ const Office = () => {
             <img src="../../computer-640.png" alt="computer"
                 className={styles['computer']}
             />
-            <img src="../../public/computer-mouse.png" alt="computer mouse"
+            <img src="../../computer-mouse.png" alt="computer mouse"
                 className={styles['computer-mouse']}
             />
-            <img src="../../public/monstera.png" alt="monstera plant"
+            <img src="../../monstera.png" alt="monstera plant"
                 className={styles['plant-monstera']}
             />
-            <img src="../../public/carpet.png" alt="carpet"
+            <img src="../../carpet.png" alt="carpet"
                 className={styles['carpet']}
             />
-            <img src="../../public/calendar-640.png" alt="calendar"
+            <img src="../../calendar-640.png" alt="calendar"
                 className={styles['calendar']}
             />
-            <img src="../../public/room-design.jpg" alt="room poster"
+            <img src="../../room-design.jpg" alt="room poster"
                 className={styles['room-design']}
             />
-            <img src="../../public/bike.png" alt="bike"
+            <img src="../../bike.png" alt="bike"
                 className={styles['bike']}
             />
-            <img src="../../public/window.png" alt="window"
+            <img src="../../window.png" alt="window"
                 className={styles['window']} style={{backgroundColor: darkMode ? "rgb(45, 53, 73)" : "rgb(168, 219, 233)"}}
             />
-            <img src="../../public/lamp.png" alt="table-lamp"
+            <img src="../../lamp.png" alt="table-lamp"
                 className={styles['lamp']}
             />
             <div className={styles['light-bulb']} style={{backgroundColor: lightOn ? "yellow" : "rgb(227, 227, 165)"}}></div>
@@ -93,7 +93,7 @@ const Office = () => {
               Array.from({ length: 2 }).map((_, i) => (
                 <img
                   key={i}
-                  src={`../../public/thumbtack.png`}
+                  src={`../../thumbtack.png`}
                   alt={`thumbtack-${i+1}`}
                   className={styles[`thumbtack-${i+1}`]}
                 />
@@ -103,7 +103,7 @@ const Office = () => {
               Array.from({ length: 8 }).map((_, i) => (
                 <img
                   key={i}
-                  src={`../../public/can${i+1}.png`}
+                  src={`../../can${i+1}.png`}
                   alt={`can-${i+1}`}
                   className={styles[`can-${i+1}`]}
                 />
