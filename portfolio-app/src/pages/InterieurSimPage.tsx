@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player';
 import interieurSimvideo from "../../public/videos/video-interieursim.mp4";
 
 const InterieurSimPage = () => {
-  const {t} = useTranslation(["global", "projects", "skills"]);
+  const {t} = useTranslation(["global", "projects", "interieursim"]);
   const { darkMode } = useOutletContext<{ darkMode: boolean }>() || {};
 
   const codeProductControllerCreateAsync = 
@@ -326,121 +326,121 @@ const codeIdentityServerHostingExtensions =
     <div  className={styles['interieursim']}>
       <h1>InterieurSim</h1>
       <p>{t(`allProjects.1.description`, {ns:"projects"})}</p>
-      <p>Het project was een opdracht voor het vak Programmeren Gevorderd 3 in mijn studies. Hiervoor moest de applicatie aan heel wat voorwaarden voldoen die we nu zullen bespreken.</p>
-      <p>Het frontend is in actieve ontwikkeling. (Video van vooruitgang op het einde van de pagina.)</p>
+      <p>{t("progGevorderd3", {ns:"interieursim"})}</p>
+      <p>{t("frontendOntwikkeling", {ns:"interieursim"})}</p>
 
-      <h2>Volledig historiek in versiebeheer via Devops</h2>
-      <img src="../../public/devops-backlog.png" alt="Devops backlog" />
-      <p className={styles['image-description']}>Devops backlog</p>
-      <img src="../../public/devops-commits.png" alt="Devops commits" />
-      <p className={styles['image-description']}>Devops commits</p>
+      <h2>{t("h2HistoriekDevops", {ns:"interieursim"})}</h2>
+      <img src="../../public/devops-backlog.png" alt={t("imgDevops", {ns:"interieursim"})} />
+      <p className={styles['image-description']}>{t("imgDevops", {ns:"interieursim"})}</p>
+      <img src="../../public/devops-commits.png" alt={t("imgDevopsCommits", {ns:"interieursim"})} />
+      <p className={styles['image-description']}>{t("imgDevopsCommits", {ns:"interieursim"})}</p>
 
       <h2>Product Api</h2>
-      <p>Communicatie tussen web services</p>
-      <img src="../../public/interieursim-systeem.png" alt="InterieurSim schema" />
-      <p className={styles['image-description']}>InterieurSim schema applicatie architectuur</p>
-      <p>We starten de ontwikkeling van InterieurSim met een cloud based Product Api die zijn gegevens opslaat in een Azure Cosmos database. We kiezen hier voor een Cosmos database omdat dit een NoSQL database is die het systeem toelaat om bij veel instanties van producten snel de data voor een product op te zoeken. De producten hebben geen onderlingen relaties. Bij onze applicatie kan de gebruiker uit een catalogus van duizenden producten zoeken voor het indelen van zijn interieur waarbij de producten zijn posities in de kamer krijgen. De verhouding tussen producten en posities is énorm groot, dus een relationele databank is een slecht idee.</p>
-      <p>Hieronder zien we de POST methode die de product gegevens van de client naar de server stuurt.</p>
-      <p className={styles['code-description']}>ProductController.cs van Product.Api</p>
+      <p>{t("communicationWebServ", {ns:"interieursim"})}</p>
+      <img src="../../public/interieursim-systeem.png" alt={t("imgAppArchitecture", {ns:"interieursim"})} />
+      <p className={styles['image-description']}>{t("imgAppArchitecture", {ns:"interieursim"})}</p>
+      <p>{t("cosmosDb", {ns:"interieursim"})}</p>
+      <p>{t("postMethod", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("productController", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductControllerCreateAsync}
       </SyntaxHighlighter>
-      <p>Vervolgens worden deze gegevens doorgestuurd en verwerkt door de ProductService.</p>
-      <p className={styles['code-description']}>ProductController.cs van Product.Service</p>
+      <p>{t("productService", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("productServiceCodeDescr", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductServiceCreateAsync}
       </SyntaxHighlighter>
-      <p>Via de repository opgeslagen in de Cosmos db.</p>
-      <p className={styles['code-description']}>ProductRepository.cs van Product.Storage</p>
+      <p>{t("productRepo", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("productRepoCodeDescr", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductRepositoryCreateAsync}
       </SyntaxHighlighter>
-      <p>Position Api wordt op een equivalente manier opgesteld.</p>
+      <p>{t("positionApi", {ns:"interieursim"})}</p>
       <h2>DTOs</h2>
-      <p>Om duidelijk af te bakenen welke informatie de client ingeeft om een Product op te stellen en welke info de server uiteindelijk opslaat schrijven we een contract neer om deze vereisten op te lijsten.</p>
-      <p> (Eveneens een contract om te registreren welke gegevens de server naar de client terug zendt.)</p>
-      <img src="../../public/DTOs.png" alt="Product contracten/DTOs" />
-      <p></p>
+      <p>{t("dtos", {ns:"interieursim"})}</p>
+      <p>{t("responseContract", {ns:"interieursim"})}</p>
+      <img src="../../public/DTOs.png" alt={t("imgDtos", {ns:"interieursim"})} />
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductResponseContract}
       </SyntaxHighlighter>
-      <h2>Blob storage</h2>
-      <p>De Cosmos product data heeft zijn bijhorede product afbeelding. Deze wordt in een Azure blob storage opgeslagen.</p>
-      <p className={styles['code-description']}>ProductImgRepository.cs van ProductImg.Storage</p>
+
+      <h2>{t("h2BlobStorage", {ns:"interieursim"})}</h2>
+      <p>{t("productBlobImg", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("productImgRepoCodeDescr", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductImgRepository}
       </SyntaxHighlighter>
 
-      <h2>Identity Server (OAuth) (mbv Duende.IdentityServer.Templates NuGet package)</h2>
-      <p>We authoriseren en authenticeren Postman om de product api en position api te gebruiken, zodat onze producten niet in gelijk welke app van derden gebruikt kan worden. We maken hiervoor gebruik van Duende Identity Server, een .NET framework om de openID en OAuth protocols te implementeren. Het framework standardiseert en vereenvoudigt de implementatie van de protocollen.</p>
-      <p className={styles['code-description']}>ProductController.cs van Product.Api</p>
+      <h2>{t("h2IdentityServer", {ns:"interieursim"})}</h2>
+      <p>{t("authPostmanDuende", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("productControllerAuth", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeAuthorizeProductApi}
       </SyntaxHighlighter>
-      <p>De Identity Server is een backend server die waakt over de juiste authorisatie en authenticatie van de app gebruikers.</p>
-      <p>Opstarten van IdentityServer</p>
+      <p>{t("identityServerBackendServer", {ns:"interieursim"})}</p>
+      <p>{t("startingServer", {ns:"interieursim"})}</p>
       <p className={styles['code-description']}>Program.cs van IdentityServer</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeIdentityServerProgram}
       </SyntaxHighlighter>
-      <p>Met zijn configuratie van build services en app pipeline die uitgevoerd worden wanneer de Identity Server opstart. We configureren hier onder andere een simpele logging en de mogelijkheid om JWT tokens te verifiëren.</p>
-      <p>JWT tokens zijn een soort van sleutels die de Identity Server naar de client stuurt voor authorisatie van de apis.</p>
-      <p className={styles['code-description']}>HostingExtensions.cs van IdentityServer</p>
+      <p>{t("buildServicesAppPipeline", {ns:"interieursim"})}</p>
+      <p>{t("jwtTokens", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("hostingExtensions", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeIdentityServerHostingExtensions}
       </SyntaxHighlighter>
-      <p>En de configuratie van de app clients. Deze app clients zijn programma's waarvoor we hun authorisatie tot de verschillende apis configureren. Voor het moment geven we enkel Postman volledige toegang tot de apis mits de juiste JWT token geauthoriseerd is.</p>
-      <p className={styles['code-description']}>HostingExtensions.cs van IdentityServer</p>
+      <p>{t("appClients", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("configIdentityServ", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeIdentityServerConfig}
       </SyntaxHighlighter>
-      <p className={styles['code-description']}>Program.cs Product.Api</p>
+      <p className={styles['code-description']}>{t("programProduct", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeIdentityServerProductApi}
       </SyntaxHighlighter>
 
-      <h2>WebApp authoriseren en Identity Server</h2>
-      <p>We voegen vervolgens gebruikers toe om via een React applicatie toegang te krijgen tot de apis. De gebruiker klikt op login in de react app, deze stuurt hem door naar de Webappauth app en vervolgens naar de Identity Server. Hier logt de gebruiker zich in en wordt vervolgens ingelogd teruggestuurd naar de react app.</p>
-      <p>We maken Identity resources aan die zorgen voor profielen met een uniek id om de creatie van unieke gebruikers te realiseren.</p>
-      <p className={styles['code-description']}>config.cs van IdentityServer</p>
+      <h2>{t("h2AuthWebApp", {ns:"interieursim"})}</h2>
+      <p>{t("addUniqueUsers", {ns:"interieursim"})}</p>
+      <p>{t("identityResources", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("configIdentityServIdentityResources", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeIdentityServerConfigIdentityResources}
       </SyntaxHighlighter>
-      <p>Vervolgens voegen we een app client toe voor de WebappAuth app.</p>
-      <p className={styles['code-description']}>config.cs van IdentityServer</p>
+      <p>{t("appClientWebappAuth", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("configWebAppAuth", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeIdentityServerAppAuthClient}
       </SyntaxHighlighter>
-      <p>We koppelen de SQL user database met Identity Server voor authenticatie via het Entity Framework. We gebruiken een eevoudige UserDbContext die zijn nodige methodes erft van IdentityDbContext (NuGet package Microsoft.AspNetCore.Identity.EntityFrameworkCore) </p>
-      <p className={styles['code-description']}>code in methode configureServices in HostingExtensions.cs van IdentityServer</p>
+      <p>{t("entityFramework", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("entityFrameworkConfigureServices", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeIdentityServerConfigureServicesAddUsers}
       </SyntaxHighlighter>
-      <p className={styles['code-description']}>Nieuwe methode InitializeDatabase in HostingExtensions.cs van IdentityServer die wordt opgeroepen in de configuratie van de app pipeline</p>
+      <p className={styles['code-description']}>{t("initializeDatabase", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeIdentityServerInitializeDatabase}
       </SyntaxHighlighter>
-      <p>Verder werden er nog cookies ingesteld die de gebruiker ingelogd houden. Dit valt buiten de scope van wat ik hier uitleg.</p>
+      <p>{t("cookies", {ns:"interieursim"})}</p>
 
-      <h2>Throttling</h2>
-      <p>We willen throttling/rate limiting toevoegen zodat teveel gebruikers het systeem niet overladen. We stellen voor dit voorbeeld in dat er elke 10 seconden 100 requests kunnen uitgevoerd worden.</p>
-      <p className={styles['code-description']}>Program.cs in Product.Api</p>
+      <h2>{t("h2Throttling", {ns:"interieursim"})}</h2>
+      <p>{t("limitRequests", {ns:"interieursim"})}</p>
+      <p className={styles['code-description']}>{t("throttlingProgramProduct", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductApiThrottlingProgram1}
       </SyntaxHighlighter>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductApiThrottlingProgram2}
       </SyntaxHighlighter>
-      <p className={styles['code-description']}>ProductController.cs in Product.Api</p>
+      <p className={styles['code-description']}>{t("throttlingProductController", {ns:"interieursim"})}</p>
       <SyntaxHighlighter language="csharp" style={darkMode? oneDark : materialLight} customStyle={{ borderRadius: "8px", fontSize: "1em" }}>
         {codeProductApiThrottlingProductController}
       </SyntaxHighlighter>
 
-      <h2>What's next?</h2>
-      <p>Momenteel zit ik in het proces van de frontend applicatie toe te voegen.</p>
+      <h2>{t("h2Whatsnext", {ns:"interieursim"})}</h2>
+      <p>{t("whatsnextAddFrontend", {ns:"interieursim"})}</p>
 
-      <h2>Video</h2>
-      <ReactPlayer src={interieurSimvideo} controls width="100%" height="100%" />
+      <h2>{t("h2Video", {ns:"interieursim"})}</h2>
+      <ReactPlayer className={styles['videoplayer']} src={interieurSimvideo} controls width="100%" height="100%" />
     </div>
   )
 }

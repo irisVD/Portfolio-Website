@@ -12,6 +12,8 @@ import projects_en from "./translations/en/projects_en.json";
 import projects_nl from "./translations/nl/projects_nl.json";
 import skills_en from "./translations/en/skills_en.json";
 import skills_nl from "./translations/nl/skills_nl.json";
+import interieursim_en from "./translations/en/interieursim_en.json";
+import interieursim_nl from "./translations/nl/interieursim_nl.json";
 import RootLayout from './layouts/RootLayout.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import InterieurSimPage from './pages/InterieurSimPage.tsx';
@@ -23,12 +25,14 @@ i18next.init({
     en: {
       global: global_en,
       projects: projects_en,
-      skills: skills_en
+      skills: skills_en,
+      interieursim: interieursim_en
     },
     nl: {
       global: global_nl,
       projects: projects_nl,
-      skills: skills_nl
+      skills: skills_nl,
+      interieursim: interieursim_nl
     }
   }
 })
