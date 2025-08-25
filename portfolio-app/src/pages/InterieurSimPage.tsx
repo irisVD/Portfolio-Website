@@ -336,7 +336,7 @@ const codeIdentityServerHostingExtensions =
 
       <h2>Product Api</h2>
       <p>{t("communicationWebServ", {ns:"interieursim"})}</p>
-      <img src="../../interieursim-systeem.png" alt={t("imgAppArchitecture", {ns:"interieursim"})} />
+      <img src="../../Interieursim-systeem.png" alt={t("imgAppArchitecture", {ns:"interieursim"})} />
       <p className={styles['image-description']}>{t("imgAppArchitecture", {ns:"interieursim"})}</p>
       <p>{t("cosmosDb", {ns:"interieursim"})}</p>
       <p>{t("postMethod", {ns:"interieursim"})}</p>
