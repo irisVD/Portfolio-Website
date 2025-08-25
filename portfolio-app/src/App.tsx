@@ -18,7 +18,7 @@ const App = () => {
   const [isListView, setIsListView] = useState(false);
   const { darkMode } = useOutletContext<{ darkMode: boolean }>() || {};
 
-  const {t} = useTranslation(["global", "projects", "skills"]);
+  const {t} = useTranslation(["global"]);
 
   //choose the screen size 
   const handleResize = () => {

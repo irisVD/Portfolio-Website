@@ -3,29 +3,43 @@
 *, html {scroll-behavior: smooth !important;}
 body {
     background-color: var(--my-background-color);
-    color: var(--text-color)
+    color: var(--text-color);
 }
 h1 {
     font-family: "Euphemia UCAS", Arial;
+    color: var(--text-color)
 }
 @keyframes buttonHoverScale {
   0% {scale: 1;}
   50% {scale: 1.05;}
   100% {scale: 1;}
 }
+
+@keyframes buttonHoverScaleIris {
+  0% {scale: 1;}
+  50% {scale: 1.03;}
+  100% {scale: 1;}
+}
+
 button {
+    font-size: inherit;
     &:hover {
         animation-name: buttonHoverScale;
         animation-duration: 0.5s;
         cursor: pointer;
+        scale: 1.01;
     }
 }
 .title-part {
     display: flex;
     margin: 0 10% 1em 10%;
     padding-top: 1em;
-    h1 {
+    align-items: center;
+    button {
+        display: flex;
         flex-grow: 3;
+        animation-name: buttonHoverScaleIris;
+        animation-duration: 0.5s;
     }
 }
 .darkmode {
@@ -105,6 +119,10 @@ h3 {
         padding-bottom: 0;
         display: flex;
         align-content: center;
+        button {
+            color: var(--text-color);
+            font-size: 1em;
+        }
         &:hover {
             border: none;
         }
@@ -285,6 +303,19 @@ a {
 @media only screen and (max-width: 720px) {
     .title-part {
         flex-direction: column-reverse;
+        > div {
+        display: flex;
+        justify-content: space-between; // <-- Add this line
+        width: 100%;                   // <-- Ensure full width
+        }
+        button {
+            display: block;
+            text-align: left; // <-- Left-align the text
+            width: 100%;      // <-- Full width for alignment
+            h1 {
+                text-align: left; // <-- Left-align the heading
+            }
+        }
     }
     .menu {
         margin-left: 0;

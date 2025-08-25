@@ -3,7 +3,8 @@
         "aboutMe": "Over mij",
         "projects": "Projecten",
         "skills": "Vaardigheden",
-        "contact": "Contact"
+        "contact": "Contact",
+        "backToHome": "Terug naar Home pagina"
     },
     "app": {
         "fullStackDeveloper": "FULL STACK APPLICATIE ONTWIKKELAAR",

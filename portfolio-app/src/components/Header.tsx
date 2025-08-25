@@ -6,6 +6,7 @@ import NL from 'country-flag-icons/react/3x2/NL';
 import { useTranslation } from 'react-i18next';
 import MenuTopHome from "./MenuTopHome";
 import MenuTopProjectPage from "./MenuTopProjectPage";
+import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
   darkMode: boolean;
@@ -19,11 +20,12 @@ const Header = (props : HeaderProps) => {
   const handleChangeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
   };
+  const navigate = useNavigate();
 
   return (
     <>
         <div className='title-part'>
-          <h1>Iris Van Damme</h1>
+          <button onClick={() => navigate("/")}><h1>Iris Van Damme</h1></button>
           <div style={{display: "flex", justifyContent: "space-between"}}>
             <div className='darkmode'>
               <button
