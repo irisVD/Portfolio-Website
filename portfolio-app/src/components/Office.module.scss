@@ -24,13 +24,13 @@ $zoomedIn : 5;
             height: 550px;
             display: block;
             position: absolute;
-            z-index: -100;
         }
         .back {
             background-color: rgba($color: $sea-green, $alpha: 0.2);
             top: 0px;
             left: 50px;
             width: 1100px;
+            transform: translateZ(0);
         }
         .left {
             width: 120px;
@@ -68,6 +68,7 @@ $zoomedIn : 5;
     background-color: transparent;
     border: none;
     transform: scale(1.3);
+    //transform: translate3d(0, 0, 300px); // z-index doesn't work well with translate on safari, so this is putting the element in front
     &:hover {
         transform: scale(1.4);
     }
@@ -118,6 +119,7 @@ img {
     position: absolute;
     filter: drop-shadow(3px -3px 5px rgba($color: black, $alpha: 0.3));
     -webkit-filter: drop-shadow(3px -3px 5px rgba($color: black, $alpha: 0.3));
+    //transform: translate3d(0, 0, 200px);  // z-index doesn't work well with translate on safari, so this is putting the element in front
 }
 .table {
     top: 370px;
@@ -131,6 +133,7 @@ img {
 .notice-board {
     top: 90px;
     left: 390px;
+    transform: translateZ(0);
     z-index: -3;
 }
 .computer {
