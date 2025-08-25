@@ -1,9 +1,8 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next';
 
 const MenuTopHome = () => {
     const {t} = useTranslation(["global"]);
-    
+
     return (
         <div className="menu">
             <div><a href="#about-me">{t("header.aboutMe")}</a></div>

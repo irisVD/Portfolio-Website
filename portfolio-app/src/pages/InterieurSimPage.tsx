@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "./InterieurSimPage.module.scss";
 import { useTranslation } from 'react-i18next';
 import { useOutletContext } from 'react-router-dom';
