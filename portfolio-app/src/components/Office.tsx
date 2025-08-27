@@ -3,6 +3,7 @@ import styles from "./Office.module.scss";
 import ProjectCard from "./ProjectCard";
 import MagnifyingGlass from './MagnifyingGlass';
 import { useOutletContext } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Office = () => {
     const [currentProjectShown, setCurrentProjectShown] = useState<number | null>(null);
@@ -11,6 +12,9 @@ const Office = () => {
     const roomContainerRef = useRef<HTMLDivElement>(null);
     const [lightOn, setLightOn] = useState<boolean>(false);
     const { darkMode } = useOutletContext<{ darkMode: boolean}>();
+    const [displayGithubLink, setDisplayGithubLink] = useState<boolean>(false);
+
+    const {t} = useTranslation(["global"]);
 
     // hardcoded because there will never be a lot of magnifying glasses
     const topPositionMagnGlass1 = 350;
@@ -54,9 +58,18 @@ const Office = () => {
             <img src="../../notice_board.png" alt="notice board"
                 className={styles['notice-board']}
             />
-            <img src="../../computer-640.png" alt="computer"
+            <img src="../../computer-640.png" alt="computer" 
                 className={styles['computer']}
+                onMouseEnter={() => {setDisplayGithubLink(true)}}
+                onMouseLeave={() => {setDisplayGithubLink(false)}}
             />
+            <a
+              href="https://github.com/irisVD/Portfolio-Website.git"
+              className={styles['github']}
+              style={{ display: displayGithubLink ? "block" : "none" }}
+            >
+              {t("app.office.github")}
+            </a>
             <img src="../../computer-mouse.png" alt="computer mouse"
                 className={styles['computer-mouse']}
             />

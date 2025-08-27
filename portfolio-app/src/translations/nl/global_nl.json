@@ -20,6 +20,9 @@
             "buttonOfficeView": "Kantoor weergave",
             "normalListView": "Normale lijst weergave"
         },
+        "office": {
+            "github": "View portfolio app code on github"
+        },
         "other": "Andere",
         "contact": {
             "mailButton": "Mail me"
