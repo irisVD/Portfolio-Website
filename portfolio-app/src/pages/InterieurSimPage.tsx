@@ -137,26 +137,71 @@ const codeIdentityServerHostingExtensions =
         // uncomment if you want to add a UI
         builder.Services.AddRazorPages();
 
+        var connectionString = builder.Configuration.GetConnectionString("ISSqlServer");
+
+        // connect with database to add the dbcontext for our custom InterieurSimUser
+        builder.Services.AddDbContext<UserDbContext>(options => 
+            options.UseSqlServer(
+                connectionString,
+                sql => sql.MigrationsAssembly(
+                    typeof(Program).Assembly.GetName().Name)
+                        .MigrationsHistoryTable(
+                            "__MyMigrationsHistory",
+                            "pg3usersinterieursim")));
+
+        builder.Services.AddIdentity<InterieurSimUser, IdentityRole>() 
+            .AddEntityFrameworkStores<UserDbContext>()
+            .AddDefaultTokenProviders();
+
+        // connect with database
         builder.Services.AddIdentityServer(options =>
             {
+                // https://docs.duendesoftware.com/identityserver/v6/fundamentals/resources/api_scopes#authorization-based-on-scopes
                 options.EmitStaticAudienceClaim = true;
-            });
+                options.IssuerUri = builder.Configuration["IdentityServerUrl"];
+                // ensures that IdentityServer generates the correct URLs for its endpoints, including the discovery document
+            })
+            .AddConfigurationStore(options =>
+            {
+                options.DefaultSchema = "pg3isinterieursim";
+                options.ConfigureDbContext = b =>
+                b.UseSqlServer(
+                    connectionString,
+                    sql => sql.MigrationsAssembly(
+                        typeof(Program).Assembly.GetName().Name)
+                            .MigrationsHistoryTable(
+                                "__MyMigrationsHistory",
+                                "pg3isinterieursim"));
+            })
+            // add hardcode testusers to db
+            //.AddTestUsers(TestUsers.Users);
+
+            // Comment next 4 lines out to not initialize the db with initial data on every run:
+            // .AddInMemoryIdentityResources(Config.IdentityResources)
+            // .AddInMemoryApiScopes(Config.ApiScopes)
+            // .AddInMemoryClients(Config.GetClients(builder.Configuration))
+            // .AddAspNetIdentity<InterieurSimUser>()
+            ;
 
         builder.Services.AddAuthentication()
-            .AddJwtBearer(options => 
+            .AddJwtBearer(options =>
             {
-                options.Authority = "https://localhost:5001"; 
-                options.TokenValidationParameters.ValidateAudience = false; 
+                options.Authority = builder.Configuration["IdentityServerUrl"];
+                options.TokenValidationParameters.ValidateAudience = false;
             });
         builder.Services.AddAuthorization();
 
         return builder.Build();
     }
-    
+
     public static WebApplication ConfigurePipeline(this WebApplication app)
-    { 
+    {
         app.UseSerilogRequestLogging();
-    
+
+        InitializeDatabase(app); // IS Client Config
+        TestUserLoader.EnsureSeedData(app);
+
+
         if (app.Environment.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
@@ -165,7 +210,7 @@ const codeIdentityServerHostingExtensions =
         // uncomment if you want to add a UI
         app.UseStaticFiles();
         app.UseRouting();
-            
+
         app.UseIdentityServer();
 
         // uncomment if you want to add a UI
@@ -180,7 +225,7 @@ const codeIdentityServerHostingExtensions =
     builder.Services.AddAuthentication()
         .AddJwtBearer(options =>
         {
-            options.Authority = "https://localhost:5001";
+            options.Authority = builder.Configuration["Authority"];
             options.TokenValidationParameters.ValidateAudience = false;
         });
     builder.Services.AddAuthorization();`;
@@ -285,14 +330,14 @@ const codeIdentityServerHostingExtensions =
     const codeIdentityServerAppAuthClient =
     `new Client {
                     ClientId = "webapp-client",
-                    ClientSecrets = {new Secret("eenNogGroterGeheim".Sha256())},
+                    ClientSecrets = { new Secret(configuration["IdentityServerClients:WebappClient:ClientSecret"]!.Sha256())},
                     AllowedGrantTypes = GrantTypes.Code,
                     AllowedScopes = {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                     },
-                    RedirectUris = { "https://localhost:7049/signin-oidc" },
-                    PostLogoutRedirectUris = { "https://localhost:7049/signout-callback-oidc" },
+                    RedirectUris = { configuration["IdentityServerClients:WebappClient:RedirectUris"]},
+                    PostLogoutRedirectUris = { configuration["IdentityServerClients:WebappClient:PostLogoutRedirectUris"] },
                 }`;
 
     const codeProductApiThrottlingProgram1 =

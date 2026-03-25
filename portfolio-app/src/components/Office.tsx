@@ -12,7 +12,6 @@ const Office = () => {
     const roomContainerRef = useRef<HTMLDivElement>(null);
     const [lightOn, setLightOn] = useState<boolean>(false);
     const { darkMode } = useOutletContext<{ darkMode: boolean}>();
-    const [displayGithubLink, setDisplayGithubLink] = useState<boolean>(false);
 
     const {t} = useTranslation(["global"]);
 
@@ -60,14 +59,10 @@ const Office = () => {
             />
             <img src="../../computer-640.png" alt="computer" 
                 className={styles['computer']}
-                onMouseEnter={() => {setDisplayGithubLink(true)}}
-                onMouseLeave={() => {setDisplayGithubLink(false)}}
             />
             <a
               href="https://github.com/irisVD/Portfolio-Website.git"
-              className={styles['github']}
-              style={{ display: displayGithubLink ? "block" : "none" }}
-            >
+              className={styles['github']}>
               {t("app.office.github")}
             </a>
             <img src="../../computer-mouse.png" alt="computer mouse"

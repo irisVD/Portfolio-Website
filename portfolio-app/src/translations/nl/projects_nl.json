@@ -14,13 +14,24 @@
         {
             "title": "InterieurSim",
             "image": "../../interieursim.png",
-            "description": "InterieurSim is een webapplicatie waarmee je een interieur op maat kunt ontwerpen. \nDeze applicatie is ontwikkeld voor mensen die naar een nieuwe woning zijn verhuisd en zich niet kunnen voorstellen waar ze hun interieur moeten plaatsen. Met InterieurSim kun je de geïnstalleerde producten of je eigen producten in een lege ruimte plaatsen om een interieurindeling te creëren die aan jouw wensen voldoet.",
+            "description": "InterieurSim is een webapplicatie met volledige backend in ontwikkeling waarmee dat de gebruiker de mogelijkheid geeft om een kamer visueel in te richten met de beschikbare catalogus aan meubels. \nDit project is oorspronkelijk ontstaan als een schoolproject in het studeren van api microservices en deployment op Azure.",
             "backend": "C# (.NET, ASP.NET) using Identity Server",
             "frontend": "React",
             "database": "Azure Cosmos db and Azure blob storage",
             "extra": "",
             "link": "/interieursim",
             "linkText": "Leer meer"
+        },
+        {
+            "title": "Portfolio app code",
+            "image": "../../portfolio-app.jpg",
+            "description": "Bekijk de React code voor deze portfolio dynamische web applicatie op Github.",
+            "backend": "/",
+            "frontend": "React",
+            "database": "/",
+            "extra": "",
+            "link": "https://github.com/irisVD/Portfolio-Website.git",
+            "linkText": "Naar Github"
         }
     ]
 }

@@ -147,11 +147,17 @@ img {
     left: 483px;
     background-color: white;
     width: 100px;
-    font-size: 12px;
+    font-size: 8px;
     padding: 0.5em;
     border-radius: 5px;
+    z-index: 1000;
+    color: black;
     &:hover {
-        background-color: #c9c9c9;
+        font-size: 13px;
+        top: 305px;
+        left: 480px;
+        width: 110px;
+        color: black;
     }
 }
 .lamp {

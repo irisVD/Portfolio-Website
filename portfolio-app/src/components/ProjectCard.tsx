@@ -56,8 +56,7 @@ const ProjectCard = (props : ProjectCardProps) => {
         </p>
         <p>{t(`allProjects.${props.project}.extra`, {ns:"projects"})}</p>
         {
-          t(`allProjects.${props.project}.title`, {ns:"projects"}) == "Voedselvoorraad (Food pantry)" ||
-          t(`allProjects.${props.project}.title`, {ns:"projects"}) == "Voedselvoorraad"
+          t(`allProjects.${props.project}.link`, {ns:"projects"}).startsWith("http") 
           ?
           <a href={t(`allProjects.${props.project}.link`, {ns:"projects"})} target="_blank" rel="noopener noreferrer">{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</a>
           :
