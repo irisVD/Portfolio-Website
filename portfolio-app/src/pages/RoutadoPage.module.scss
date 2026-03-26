@@ -1,0 +1,26 @@
+@use '../shared' as *;
+
+.routado {
+    width: 65%;
+    margin: 1em auto;
+    h1 {
+        margin-bottom: 0.5em;
+    }
+
+    .description, a {
+        margin-bottom: 1em;
+    }
+    ul {
+        margin-left: 2em;
+        margin-bottom: 1em;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .videoplayer {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}

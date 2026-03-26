@@ -298,6 +298,14 @@ img {
   width: 80%;
 }
 
+.routado-dog {
+    position: absolute;
+    top: 500px;
+    left: 260px;
+    z-index: 7;
+    transform: scale(0.8);
+}
+
 button {
     background-color: transparent;
     border: none;

@@ -23,6 +23,28 @@
             "linkText": "Learn more"
         },
         {
+            "title": "Routado",
+            "image": "../../routado-icon.png",
+            "description": "Routado is a React native application that allows dogshelters to manage the dogs information and displays an overview of the dog walking routes of the dogs/dogwalkers.",
+            "backend": "/",
+            "frontend": "React native",
+            "database": "Firebase firestore, Firebase authentication",
+            "extra": "",
+            "link": "/routado",
+            "linkText": "Learn more"
+        },
+        {
+            "title": "Graduate thesis XPlanner time tracker",
+            "image": "../../xplanner-time-tracker.jpg",
+            "description": "The implementation of a new dynamic frontend interface for Xplanner with the functional programming language Clojure and the framework re-frame for the software developers and the manager of Lorre Engineering. The new application shows you a better overview of the Scumplanning- and registration.",
+            "backend": "Clojure",
+            "frontend": "re-frame",
+            "database": "PostgreSQL",
+            "extra": "",
+            "link": "/xplanner-time-tracker",
+            "linkText": "Learn more"
+        },
+        {
             "title": "Portfolio app code",
             "image": "../../portfolio-app.jpg",
             "description": "View the React code for this portfolio dynamic web application on Github.",

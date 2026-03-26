@@ -23,6 +23,28 @@
             "linkText": "Leer meer"
         },
         {
+            "title": "Routado",
+            "image": "../../routado-icon.png",
+            "description": "Routado is een React native applicatie die hondenasielen de mogelijkheid geeft om de honden informatie te beheren en de wandelroutes van de honden/wandelaars op te volgen.",
+            "backend": "/",
+            "frontend": "React native",
+            "database": "Firebase firestore, Firebase authentication",
+            "extra": "",
+            "link": "/routado",
+            "linkText": "Leer meer"
+        },
+        {
+            "title": "Graduaatsproef XPlanner time tracker",
+            "image": "../../xplanner-time-tracker.jpg",
+            "description": "De ontwikkeling van een nieuwe dynamische frontend interface voor Xplanner met behulp van de functionele programmeertaal Clojure en het framework re-frame voor de softwareontwikkelaars en manager van Lorre Engineering om visueel een beter overzicht te krijgen van de Scrumplanning- en registratie.",
+            "backend": "Clojure",
+            "frontend": "re-frame",
+            "database": "PostgreSQL",
+            "extra": "",
+            "link": "/xplanner-time-tracker",
+            "linkText": "Leer meer"
+        },
+        {
             "title": "Portfolio app code",
             "image": "../../portfolio-app.jpg",
             "description": "Bekijk de React code voor deze portfolio dynamische web applicatie op Github.",
@@ -33,5 +55,6 @@
             "link": "https://github.com/irisVD/Portfolio-Website.git",
             "linkText": "Naar Github"
         }
+        
     ]
 }

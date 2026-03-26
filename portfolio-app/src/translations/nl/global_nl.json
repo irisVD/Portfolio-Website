@@ -2,19 +2,21 @@
     "header": {
         "aboutMe": "Over mij",
         "projects": "Projecten",
+        "experience": "Ervaring",
         "skills": "Vaardigheden",
         "contact": "Contact",
         "backToHome": "Terug naar Home pagina"
     },
     "app": {
-        "fullStackDeveloper": "FULL STACK APPLICATIE ONTWIKKELAAR",
+        "fullStackDeveloper": "BACKEND- EN FRONTEND ONTWIKKELAAR",
         "qualities": {
             "teamwork": "SAMENWERKING",
             "eagerToLearn": "LEERGIERIG",
             "independent": "ZELFSTANDIG"
         },
-        "aboutMe": "Full-stack developer, studerende aan de HoGent (Hogeschool Gent) om het diploma graduaat Programmeren te behalen omdat ik een passie heb voor programmeren, algoritmen en IT. Elke dag nieuwe uitdagingen tegenkomen en overwinnen motiveert me om bij te leren. Ik ben gespecialiseerd in C# (.NET), Java, JavaScript (React & Node.js) en MySQL/Microsoft SQL Server/MongoDB.",
-        "internship": "Momenteel beschikbaar voor een stage (gevestigd in Oost-Vlaanderen) voor de periode September 2025 - January 2026.",
+        "aboutMe": "Backend- en frontend developer, vers afgestudeerd van de HoGent (Hogeschool Gent) met het diploma graduaat Programmeren. Ik ben doorgaans continu op zoek naar nieuwe uitdagingen om meer bij te leren. Ik heb een passie voor applicatie-ontwikkeling, -integratie en -beheer. Gespecialiseerd in C# (.NET), Clojure, JavaScript (React), UML en MySQL/SQL Server. Mijn volgend doel is om een uitdagende werkomgeving te vinden, zodat ik in een team aan innoverende use cases in het werkveld kan implementeren en mijn huidige skillset verder te verbeteren door me te omringen met ervaren ontwikkelaars die me feedback kunnen geven.",
+        "job": "Momenteel beschikbaar voor een nieuwe uitdaging (gevestigd rond Mechelen).",
+        "experience": "Stage bij Lorre Engineering waar ik werkte aan de backend en frontend van de ziekenhuisapplicatie LEMPweb. LEMPweb is een applicatie waar de patiënten de maaltijd menus voor de komende dagen kunnen bekijken en wijzigen. Voor deze stage heb ik de programmeertaal Clojure geleerd voor zowel de backend als de frontend en implementeerde ik database beheer code in PostgreSQL.",
         "officeInstructions": {
             "instruction": "Klik op de verschillende elementen om afgelopen programmeer projecten te ontdekken",
             "buttonOfficeView": "Kantoor weergave",
@@ -30,5 +32,8 @@
         "footer": {
             "developedBy": "Ontwikkeld door Iris Van Damme"
         }
+    },
+    "xplannerTimeTracker": {
+        "graduateThesis": "Zie hieronder het verslag van mijn graduaatsproef:"
     }
 }

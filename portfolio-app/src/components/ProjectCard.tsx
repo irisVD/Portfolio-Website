@@ -41,7 +41,7 @@ const ProjectCard = (props : ProjectCardProps) => {
         <h1>{t(`allProjects.${props.project}.title`, {ns:"projects"})}</h1>
         <img src={t(`allProjects.${props.project}.image`, {ns:"projects"})} alt={`image ${t("title", {ns:"projects"})}`}/>
 
-        <p>{t(`allProjects.${props.project}.description`, {ns:"projects"})}</p>
+        <p className={styles['project-description']}>{t(`allProjects.${props.project}.description`, {ns:"projects"})}</p>
         <p className={styles['specs']}>
           <span>Backend: </span>
           <span>{t(`allProjects.${props.project}.backend`, {ns:"projects"})}</span>
@@ -58,9 +58,13 @@ const ProjectCard = (props : ProjectCardProps) => {
         {
           t(`allProjects.${props.project}.link`, {ns:"projects"}).startsWith("http") 
           ?
-          <a href={t(`allProjects.${props.project}.link`, {ns:"projects"})} target="_blank" rel="noopener noreferrer">{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</a>
+          <a href={t(`allProjects.${props.project}.link`, {ns:"projects"})} target="_blank" rel="noopener noreferrer"
+            className={styles['btn-primary']}>
+              {t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</a>
           :
-          <Link to={t(`allProjects.${props.project}.link`, {ns:"projects"})}>{t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</Link>
+          <Link to={t(`allProjects.${props.project}.link`, {ns:"projects"})}
+            className={styles['btn-primary']}>
+              {t(`allProjects.${props.project}.linkText`, {ns:"projects"})}</Link>
         }
         
       </div>

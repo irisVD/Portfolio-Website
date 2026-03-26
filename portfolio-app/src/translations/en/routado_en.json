@@ -1,0 +1,10 @@
+{
+    "adminFunctions": "As a dogshelter admin with this mobile app you can:",
+    "adminFunct1": "Edit the dogshelter dogs info",
+    "adminFunct2": "Display an overview of the dogs walking info",
+    "adminFunct3": "Display an overview of the dogwalkers and their walks",
+    "dogWalkerFunctions": "As a dogwalker with this mobile app you can:",
+    "dogWalkerFunct1": "Track your walks",
+    "dogWalkerFunct2": "Display an overview of the dogs info of your dogshelter",
+    "dogWalkerFunct3": "Display an overview of your walks info and the stats of your dogs"
+}

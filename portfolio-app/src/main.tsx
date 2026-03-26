@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import App from './App.tsx';
 
 import i18next from "i18next";
 import {I18nextProvider} from "react-i18next";
@@ -12,11 +12,15 @@ import projects_en from "./translations/en/projects_en.json";
 import projects_nl from "./translations/nl/projects_nl.json";
 import skills_en from "./translations/en/skills_en.json";
 import skills_nl from "./translations/nl/skills_nl.json";
+import routado_en from "./translations/en/routado_en.json";
+import routado_nl from "./translations/nl/routado_nl.json";
 import interieursim_en from "./translations/en/interieursim_en.json";
 import interieursim_nl from "./translations/nl/interieursim_nl.json";
 import RootLayout from './layouts/RootLayout.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import InterieurSimPage from './pages/InterieurSimPage.tsx';
+import RoutadoPage from './pages/RoutadoPage.tsx';
+import TimeTrackerPage from './pages/TimeTrackerPage.tsx';
 
 i18next.init({
   interpolation: {escapeValue: false}, // emitigate attacks,
@@ -26,28 +30,38 @@ i18next.init({
       global: global_en,
       projects: projects_en,
       skills: skills_en,
-      interieursim: interieursim_en
+      interieursim: interieursim_en,
+      routado: routado_en
     },
     nl: {
       global: global_nl,
       projects: projects_nl,
       skills: skills_nl,
-      interieursim: interieursim_nl
+      interieursim: interieursim_nl,
+      routado: routado_nl
     }
   }
 })
 
-const browserRouter = createBrowserRouter([
+export const browserRouter = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <App />,
       },
       {
         path: "/interieursim",
         element: <InterieurSimPage />,
+      },
+      {
+        path: "/routado",
+        element: <RoutadoPage />,
+      },
+      {
+        path: "/xplanner-time-tracker",
+        element: <TimeTrackerPage />,
       },
     ],
   },
@@ -61,3 +75,4 @@ createRoot(document.getElementById('root')!).render(
     </I18nextProvider>
   </StrictMode>,
 )
+

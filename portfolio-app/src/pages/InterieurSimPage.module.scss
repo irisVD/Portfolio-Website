@@ -1,3 +1,4 @@
+@use '../shared' as *;
 .interieursim {
     width: 65%;
     margin: 1em auto;
@@ -29,4 +30,5 @@
     .videoplayer {
         margin-bottom: 3.5em;
     }
+
 }

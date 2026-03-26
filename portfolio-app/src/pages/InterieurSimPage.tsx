@@ -367,9 +367,12 @@ const codeIdentityServerHostingExtensions =
         }`;
 
   return (
-    <div  className={styles['interieursim']}>
+    <div className={styles['interieursim']}>
       <h1>InterieurSim</h1>
       <p>{t(`allProjects.1.description`, {ns:"projects"})}</p>
+      <a href="https://github.com/irisVD/InterieurSim" target="_blank" rel="noopener noreferrer"
+        className={styles['btn-primary']}>{t("app.github.viewOnGithub", {ns:"global"})}</a>
+      
       <p>{t("progGevorderd3", {ns:"interieursim"})}</p>
       <p>{t("frontendOntwikkeling", {ns:"interieursim"})}</p>
 

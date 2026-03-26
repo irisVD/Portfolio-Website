@@ -2,6 +2,7 @@
     "header": {
         "aboutMe": "About me",
         "projects": "Projects",
+        "experience": "Experience",
         "skills": "Skills",
         "contact": "Contact",
         "backToHome": "Back to Home page"
@@ -13,8 +14,9 @@
             "eagerToLearn": "EAGER TO LEARN",
             "independent": "INDEPENDENT"
         },
-        "aboutMe": "I am a full stack developer pursuing an associate degree at HoGent (Ghent college) because I'm passionate about coding, algorithms and IT. Especially finding new challenges everyday and overcoming them drives me to learn more. Specialised in C# (.NET), Java, JavaScript (React & Node.js) and MySQL/Microsoft SQL Server/MongoDB.",
-        "internship": "Currently looking for an internship (based in the East Flanders) for the period September 2025 - January 2026.",
+        "aboutMe": "Recent graduate with an associate degree in Programming at 'Hogeschool Gent' (Ghent College). I am constantly seeking new challenges to keep me busy and overcoming them drives me to learn more. I am passionate about application development/integration/management. Specialised in C# (.NET), Clojure, JavaScript (React), UML and MySQL/Microsoft SQL Server. The next goal is to find a work place so I can work in a team on real life innovative use cases, learn about the current IT workplace climate and keep improving my skillset along more experienced software developers.",
+        "job": "Currently looking for a new opportunity (based around 'Mechelen').",
+        "experience": "Internship at Lorre Engineering where I worked on a the backend and frontend of the hospital application LEMPweb. LEMPweb is application where patients can view and edit their meal menus for the next few days. I learned the programming language Clojure for this internship for both the backend and the frontend and implemented database management code in PostgreSQL.",
         "officeInstructions": {
             "instruction": "Click on the different elements to explore past code projects",
             "buttonOfficeView": "Office view",
@@ -27,8 +29,14 @@
         "contact": {
             "mailButton": "Mail me"
         },
+        "github": {
+            "viewOnGithub": "View project code on Github"
+        },
         "footer": {
             "developedBy": "Developed by Iris Van Damme"
         }
+    },
+    "xplannerTimeTracker": {
+        "graduateThesis": "See my graduate thesis below (only in Dutch):"
     }
 }

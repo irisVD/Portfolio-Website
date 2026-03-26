@@ -1,10 +1,10 @@
 {
-    "Cat1": "Front-End",
-    "Skills1": "React, TypeScript/JavaScript, HTML, (S)CSS, WPF, JavaFX",
-    "Cat2": "Back-End",
-    "Skills2": "C# (.NET, ASP.NET), REST api, Node.js, Java",
+    "Cat1": "Frontend",
+    "Skills1": "React (TypeScript & JavaScript) (+ re-frame), React Native, HTML, (S)CSS (+ TailwindCSS), JavaFX, WPF",
+    "Cat2": "Backend",
+    "Skills2": ".NET (C#), REST API, Clojure, Node.js",
     "Cat3": "Database beheer",
-    "Skills3": "MySQL, SQL Server, MongoDB, Azure Blob, Azure Cosmos",
+    "Skills3": "MySQL, SQL Server, MongoDB, Azure Cosmos, Azure blob storage",
     "Cat4": "Andere",
-    "Skills4": "Git, Devops, UML"
+    "Skills4": "GIT, UML"
 }

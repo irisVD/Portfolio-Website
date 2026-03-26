@@ -20,8 +20,10 @@ const Office = () => {
     const leftPositionMagnGlass1 = 980;
     const topPositionMagnGlass2 = 160;
     const leftPositionMagnGlass2 = 520;
-    // const topPositionMagnGlass3 = 350;
-    // const leftPositionMagnGlass3 = 980;
+    const topPositionMagnGlass3 = 550;
+    const leftPositionMagnGlass3 = 300;
+    const topPositionMagnGlass4 = 160;
+    const leftPositionMagnGlass4 = 720;
 
 
     const showScroll = () => {
@@ -46,7 +48,8 @@ const Office = () => {
             </div> */}
             <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {1} topPosition={topPositionMagnGlass1} leftPosition={leftPositionMagnGlass1} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/>
             <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {2} topPosition={topPositionMagnGlass2} leftPosition={leftPositionMagnGlass2} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/>
-            {/* <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {3} topPosition={topPositionMagnGlass3} leftPosition={leftPositionMagnGlass3} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/> */}
+            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {3} topPosition={topPositionMagnGlass3} leftPosition={leftPositionMagnGlass3} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/>
+            <MagnifyingGlass setCurrentProjectShown={setCurrentProjectShown} id = {4} topPosition={topPositionMagnGlass4} leftPosition={leftPositionMagnGlass4} setLeftOffset={setLeftOffset} setTopOffset={setTopOffset}/>
 
             <img src="../../table-with-top.png" alt="table"
                 className={styles['table']}
@@ -62,6 +65,7 @@ const Office = () => {
             />
             <a
               href="https://github.com/irisVD/Portfolio-Website.git"
+              target="_blank" rel="noopener noreferrer"
               className={styles['github']}>
               {t("app.office.github")}
             </a>
@@ -88,6 +92,9 @@ const Office = () => {
             />
             <img src="../../lamp.png" alt="table-lamp"
                 className={styles['lamp']}
+            />
+            <img src="../../routado_dog.png" alt="routado dog"
+                className={styles['routado-dog']}
             />
             <div className={styles['light-bulb']} style={{backgroundColor: lightOn ? "yellow" : "rgb(227, 227, 165)"}}></div>
             <button className={styles['light-button']}

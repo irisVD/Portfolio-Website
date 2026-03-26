@@ -1,6 +1,6 @@
 @use './shared' as *;
 
-*, html {scroll-behavior: smooth !important;}
+*, html {scroll-behavior: smooth;}
 body {
     background-color: var(--my-background-color);
     color: var(--text-color);
@@ -192,7 +192,7 @@ a {
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
 }
-.about-me{
+.about-me {
     background-color: rgba($color: var(--primary-color), $alpha: 0.2);
     padding: 2em 15%;
     margin-bottom: 5em;
@@ -204,8 +204,16 @@ a {
         color: rgba($color: var(--primary-color-darker), $alpha: 1);
     }
 }
+.experience{
+    padding: 0 15%;
+    margin-bottom: 5em;
+
+    div, p {
+        margin: 1em;
+    }
+}
 .dotted-line {
-    border-top: 5px dotted var(--text-color);
+    border-top: 3px dashed var(--text-color);
     width: 20%;
     margin: 1em auto;
 }
@@ -232,23 +240,11 @@ a {
         margin: 2em 0;
     }
 }
-.green-button {
-    background-color: rgba($color: var(--primary-color), $alpha: 1);
-    padding: 1em;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    &:hover {
-        background-color: rgba($color: var(--button-hover), $alpha: 0.8);
-    }
+.mail-button {
     p {
         margin: 0;
-        color: black;
     }
-    svg {
-        width: 24px;
-        height: 24px;
-    }
+
 }
 
 .skills {
@@ -360,3 +356,8 @@ a {
         }
     }
 }
+
+.xplanner-time-tracker {
+        width: 80%;
+        margin: 0 auto;
+    }
