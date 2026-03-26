@@ -35,12 +35,23 @@ button {
     margin: 0 10% 1em 10%;
     padding-top: 1em;
     align-items: center;
-    button {
+    justify-content: space-between;
+    .darkmode button, .languages button {
         display: flex;
         flex-grow: 3;
         animation-name: buttonHoverScaleIris;
         animation-duration: 0.5s;
     }
+    .menu-title {
+        .menu-icon {
+            font-size: 30px;
+            display: none;
+            svg {
+                align-self: center;
+            }
+        }
+    }
+    
 }
 .darkmode {
     margin-right: 1em;
@@ -94,40 +105,44 @@ h3 {
 }
 
 .menu {
-    div {
-        font-family: "Euphemia UCAS", Arial;
-        margin: 1em 3%;
-        padding-bottom: 0.4em;
-        border-bottom: 1px solid rgb(var(--accent-text-default-background));
-        &:hover {
-            border-bottom: 1px solid rgba(var(--accent-text-default-background), 0.8);
-            animation-name: buttonHoverScale;
-            animation-duration: 0.5s;
+    .menu-items {
+        div {
+            font-family: "Euphemia UCAS", Arial;
+            margin: 1em 3%;
+            padding-bottom: 0.4em;
+            border-bottom: 1px solid rgb(var(--accent-text-default-background));
+            &:hover {
+                border-bottom: 1px solid rgba(var(--accent-text-default-background), 0.8);
+                animation-name: buttonHoverScale;
+                animation-duration: 0.5s;
+            }
         }
-    }
-    display: flex;
-    justify-content: flex-start;
-    background-color: rgba(var(--primary-color), 0.2);
-    padding: 0 7%;
-    margin-bottom: 2em;
-
-    .back-to-home {
-        svg {
-            margin-right: 1em;
-        }
-        border: none;
-        padding-bottom: 0;
         display: flex;
-        align-content: center;
-        button {
-            color: var(--text-color);
-            font-size: 1em;
-        }
-        &:hover {
+        justify-content: flex-start;
+        background-color: rgba(var(--primary-color), 0.2);
+        padding: 0 7%;
+        margin-bottom: 2em;
+
+        .back-to-home {
+            svg {
+                margin-right: 1em;
+            }
             border: none;
+            padding-bottom: 0;
+            button {
+                color: var(--text-color);
+                font-size: 1em;
+                display: flex;
+                align-content: center;
+            }
+            &:hover {
+                border: none;
+            }
         }
     }
 }
+
+
 
 a {
     text-decoration: none;
@@ -160,8 +175,6 @@ a {
     }
     img {
         max-width: 200px;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
         border-radius: 100px;
         width: 60%;
         margin: 0 2em;
@@ -304,7 +317,7 @@ a {
         justify-content: space-between; // <-- Add this line
         width: 100%;                   // <-- Ensure full width
         }
-        button {
+        .darkmode button, .languages button {
             display: block;
             text-align: left; // <-- Left-align the text
             width: 100%;      // <-- Full width for alignment
@@ -313,7 +326,7 @@ a {
             }
         }
     }
-    .menu {
+    .menu-items {
         margin-left: 0;
     }
     .me-card {
@@ -354,10 +367,30 @@ a {
         .qualities {
             font-size: 12px;
         }
+    
+        .menu-items {
+            display: block !important;
+            padding-top: 0.5em !important;
+            padding-bottom: 0.5em !important;
+        }
+        .menu-icon {
+            display: flex !important;
+        }
+        .menu-big-screen {
+            display: none;
+        }
     }
 }
 
 .xplanner-time-tracker {
         width: 80%;
         margin: 0 auto;
+
+        p {
+            margin-bottom: 1em;
+        }
+        .graduate-thesis {
+            max-width: 900px;
+            overflow-x: hidden;
+        }
     }

@@ -1,13 +1,12 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next';
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 import styles from "./RoutadoPage.module.scss";
-import adminDogInfo from "../../public/videos/routado_admin_dogs.mp4";
-import dogwalkerDogs from "../../public/videos/routado_dogwalker_dogs.mp4";
-import dogwalkerWalks from "../../public/videos/routado_dogwalker_walks.mp4";
-import dogwalkerGps from "../../public/videos/routado_gps.mp4";
-import dogwalkerLogin from "../../public/videos/routado_login.mp4";
-import dogwalkerProfile from "../../public/videos/routado_profile_dogshelterinfo.mp4";
+// import adminDogInfo from "../../public/videos/routado_admin_dogs.mp4";
+// import dogwalkerDogs from "../../public/videos/routado_dogwalker_dogs.mp4";
+// import dogwalkerWalks from "../../public/videos/routado_dogwalker_walks.mp4";
+// import dogwalkerGps from "../../public/videos/routado_gps.mp4";
+// import dogwalkerLogin from "../../public/videos/routado_login.mp4";
+// import dogwalkerProfile from "../../public/videos/routado_profile_dogshelterinfo.mp4";
 
 const RoutadoPage = () => {
     const {t} = useTranslation(["global", "projects", "interieursim", "routado"]);
@@ -21,7 +20,7 @@ const RoutadoPage = () => {
         <p>{t("adminFunctions", {ns:"routado"})}</p>
         <ul>
             <li>{t("adminFunct1", {ns:"routado"})}</li>
-            <ReactPlayer className={styles['videoplayer']} src={adminDogInfo} controls width="75%" height="100%" muted />
+            {/* <ReactPlayer className={styles['videoplayer']} src={adminDogInfo} controls width="75%" height="100%" muted /> */}
             <li>{t("adminFunct2", {ns:"routado"})}</li>
             <li>{t("adminFunct3", {ns:"routado"})}</li>
             
@@ -29,19 +28,19 @@ const RoutadoPage = () => {
         <p>{t("dogWalkerFunctions", {ns:"routado"})}</p>
         <ul>
             <li>{t("dogWalkerFunct1", {ns:"routado"})}</li>
-            <ReactPlayer className={styles['videoplayer']} src={dogwalkerGps} controls width="75%" height="100%"/>
+            {/* <ReactPlayer className={styles['videoplayer']} src={dogwalkerGps} controls width="75%" height="100%"/> */}
             <li>{t("dogWalkerFunct2", {ns:"routado"})}</li>
-            <div className={styles['flex-container']}>
+            {/* <div className={styles['flex-container']}>
                 <ReactPlayer className={styles['videoplayer']} src={dogwalkerDogs} controls width="48%" height="100%" />
                 <ReactPlayer className={styles['videoplayer']} src={dogwalkerProfile} controls width="48%" height="100%" />
-            </div>
+            </div> */}
             
             <li>{t("dogWalkerFunct3", {ns:"routado"})}</li>
             
-            <div className={styles['flex-container']}>
+            {/* <div className={styles['flex-container']}>
                 <ReactPlayer className={styles['videoplayer']} src={dogwalkerWalks} controls width="48%" height="100%" />
                 <ReactPlayer className={styles['videoplayer']} src={dogwalkerLogin} controls width="48%" height="100%" />
-            </div>
+            </div> */}
             
         </ul>
     </div>

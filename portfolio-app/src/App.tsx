@@ -42,7 +42,7 @@ const App = () => {
           {!isMobile ? <p className='iris-name'>Iris Van Damme</p> : <></>}
         </div>
         
-        <img src="../../profile_picture.jpeg" alt="profile picture" />
+        <img src="../../profile_picture.jpg" alt="profile picture" />
         {isMobile ? <p className='iris-name'>Iris Van Damme</p> : <></>}
       </div>
       <div className='qualities'>

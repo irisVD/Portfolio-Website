@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useOutletContext } from 'react-router-dom';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark, materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import ReactPlayer from 'react-player';
-import interieurSimvideo from "../../public/videos/video-interieursim.mp4";
+// import ReactPlayer from 'react-player';
+// import interieurSimvideo from "../../public/videos/video-interieursim.mp4";
 
 const InterieurSimPage = () => {
   const {t} = useTranslation(["global", "projects", "interieursim"]);
@@ -486,8 +486,8 @@ const codeIdentityServerHostingExtensions =
       <h2>{t("h2Whatsnext", {ns:"interieursim"})}</h2>
       <p>{t("whatsnextAddFrontend", {ns:"interieursim"})}</p>
 
-      <h2>{t("h2Video", {ns:"interieursim"})}</h2>
-      <ReactPlayer className={styles['videoplayer']} src={interieurSimvideo} controls width="100%" height="100%" />
+      {/* <h2>{t("h2Video", {ns:"interieursim"})}</h2>
+      <ReactPlayer className={styles['videoplayer']} src={interieurSimvideo} controls width="100%" height="100%" /> */}
     </div>
   )
 }

@@ -4,7 +4,7 @@ const MenuTopHome = () => {
     const {t} = useTranslation(["global"]);
 
     return (
-        <div className="menu">
+        <div className='menu-items'>
             <div><a href="#about-me">{t("header.aboutMe")}</a></div>
             <div><a href="#experience">{t("header.experience")}</a></div>
             <div><a href="#projects">{t("header.projects")}</a></div>
