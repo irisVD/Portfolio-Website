@@ -7,7 +7,7 @@ const MenuTopProjectPage = () => {
   
   const navigate = useNavigate();
       return (
-          <div className="menu">
+          <div className="menu-items">
                 <div className="back-to-home"><button onClick={() => navigate("/")}><FaArrowLeftLong />{t("header.backToHome")}</button></div>
           </div>
       )

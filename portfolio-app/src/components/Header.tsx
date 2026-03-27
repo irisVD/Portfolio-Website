@@ -39,45 +39,67 @@ const Header = (props : HeaderProps) => {
 
   return (
     <>
-        <div className='title-part'>
-          <div className="menu-title">
-            <button className='menu-icon' onClick={() => setMenuOpen(menuOpen => !menuOpen)}><IoMdMenu /></button>
-            <button onClick={() => navigate("/")}><h1>Iris Van Damme</h1></button>
+      <div className="title-part">
+        <div className="menu-title">
+          {props.pathName == "/" && 
+            <button
+              className="menu-icon"
+              onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
+            >
+              <IoMdMenu />
+            </button>
+          }
+          
+          <button onClick={() => navigate("/")}>
+            <h1>Iris Van Damme</h1>
+          </button>
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="darkmode">
+            <button onClick={() => props.setDarkMode(true)}>
+              <AiOutlineMoon size={24} className="moon-icon" />
+            </button>
+            <div></div>
+
+            <button onClick={() => props.setDarkMode(false)}>
+              <AiOutlineSun size={24} className="sun-icon" />
+            </button>
           </div>
-          <div style={{display: "flex", justifyContent: "space-between"}}>
-            <div className='darkmode'>
-              <button
-                onClick={() => props.setDarkMode(true)}>
-                <AiOutlineMoon size={24} className='moon-icon'/>
-              </button>
-              <div></div>
-              
-              <button
-                onClick={() => props.setDarkMode(false)}>
-                <AiOutlineSun size={24} className='sun-icon'/>
-              </button>
-            </div>
-            <div className='languages'>
-              <button style={{filter: i18n.language == "en" ? "saturate(0.5)" : "saturate(1)"}}
-                onClick={() => handleChangeLanguage("en")}
-              ><GB /></button>
-              <div></div>
-              <button style={{filter: i18n.language == "nl" ? "saturate(0.5)" : "saturate(1)"}}
-                onClick={() => handleChangeLanguage("nl")}
-              ><NL /></button>
-            </div>
+          <div className="languages">
+            <button
+              style={{
+                filter: i18n.language == "en" ? "saturate(0.5)" : "saturate(1)",
+              }}
+              onClick={() => handleChangeLanguage("en")}
+            >
+              <GB />
+            </button>
+            <div></div>
+            <button
+              style={{
+                filter: i18n.language == "nl" ? "saturate(0.5)" : "saturate(1)",
+              }}
+              onClick={() => handleChangeLanguage("nl")}
+            >
+              <NL />
+            </button>
           </div>
         </div>
-        {props.pathName == '/' ? 
-          <div className="menu">
-            <div className="menu-small-screen" style={{display: menuOpen ? "block" : "none"}}><MenuTopHome /></div>
+      </div>
+      <div className="menu">
+        {props.pathName == "/" ? 
+          <>
+            <div className="menu-small-screen"
+              style={{ display: menuOpen ? "block" : "none" }}>
+                <MenuTopHome /></div>
             <div className="menu-big-screen"><MenuTopHome /></div>
-          </div>
-          : 
-          <MenuTopProjectPage /> }
+          </>
+         : 
+          <MenuTopProjectPage />
+        }
+      </div>
     </>
-    
-  )
+  );
 }
 
 export default Header

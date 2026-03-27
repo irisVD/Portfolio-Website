@@ -41,8 +41,8 @@ const RoutadoPage = () => {
                 <ReactPlayer className={styles['videoplayer']} src={dogwalkerWalks} controls width="48%" height="100%" />
                 <ReactPlayer className={styles['videoplayer']} src={dogwalkerLogin} controls width="48%" height="100%" />
             </div> */}
-            
         </ul>
+        <p>{t("videosComing", {ns:"routado"})}</p>
     </div>
   )
 }
