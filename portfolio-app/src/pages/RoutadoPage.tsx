@@ -73,7 +73,6 @@ const RoutadoPage = () => {
             </div>
             
         </ul>
-        <p>{t("videosComing", {ns:"routado"})}</p>
     </div>
   )
 }
