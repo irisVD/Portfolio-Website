@@ -488,6 +488,12 @@ const codeIdentityServerHostingExtensions =
 
       {/* <h2>{t("h2Video", {ns:"interieursim"})}</h2>
       <ReactPlayer className={styles['videoplayer']} src={interieurSimvideo} controls width="100%" height="100%" /> */}
+        <video
+            controls
+            width="30%"
+            src={`${import.meta.env.VITE_REACT_APP_URL}/video-interieursim.mp4`}> 
+            Your browser does not support the video tag.
+        </video>
     </div>
   )
 }
