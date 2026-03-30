@@ -32,7 +32,7 @@ const RoutadoPage = () => {
             <video
                 controls
                 width="30%"
-                src={`${import.meta.env.VITE_REACT_APP_URL}/routado_dogwalker_walks.mp4`}> 
+                src={`${import.meta.env.VITE_REACT_APP_URL}/routado_gps.mp4`}> 
                 Your browser does not support the video tag.
             </video>
             <li>{t("dogWalkerFunct2", {ns:"routado"})}</li>
@@ -58,7 +58,18 @@ const RoutadoPage = () => {
             <div className={styles['flex-container']}>
                 {/* <ReactPlayer className={styles['videoplayer']} src={dogwalkerWalks} controls width="48%" height="100%" />
                 <ReactPlayer className={styles['videoplayer']} src={dogwalkerLogin} controls width="48%" height="100%" /> */}
-
+                <video
+                    controls
+                    width="30%"
+                    src={`${import.meta.env.VITE_REACT_APP_URL}/routado_dogwalker_walks.mp4`}> 
+                    Your browser does not support the video tag.
+                </video>
+                <video
+                    controls
+                    width="30%"
+                    src={`${import.meta.env.VITE_REACT_APP_URL}/routado_login.mp4`}> 
+                    Your browser does not support the video tag.
+                </video>
             </div>
             
         </ul>
