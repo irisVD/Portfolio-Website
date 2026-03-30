@@ -29,11 +29,15 @@
         "contact": {
             "mailButton": "Mail me"
         },
+        "github": {
+            "viewOnGithub": "Bekijk de code op github"
+        },
         "footer": {
             "developedBy": "Ontwikkeld door Iris Van Damme"
         }
     },
     "xplannerTimeTracker": {
         "graduateThesis": "Zie hieronder het verslag van mijn graduaatsproef:"
-    }
+    },
+    "azureFreeSubscription": "De webapp wordt gehost op een gratis Azure abonnement, dus het kan even duren todat de videos volledig ingeladen zijn."
 }

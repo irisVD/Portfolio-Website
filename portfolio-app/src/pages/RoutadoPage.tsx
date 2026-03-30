@@ -17,6 +17,7 @@ const RoutadoPage = () => {
         <p className={styles['description']}>{t(`allProjects.2.description`, {ns:"projects"})}</p>
         <a href="https://github.com/irisVD/routado" target="_blank" rel="noopener noreferrer"
             className={styles['btn-primary']}>{t("app.github.viewOnGithub", {ns:"global"})}</a>
+        <p className='error'>{t("azureFreeSubscription", {ns:"global"})}</p>
         <p>{t("adminFunctions", {ns:"routado"})}</p>
         <ul>
             <li>{t("adminFunct1", {ns:"routado"})}</li>
@@ -31,7 +32,6 @@ const RoutadoPage = () => {
             {/* <ReactPlayer className={styles['videoplayer']} src={dogwalkerGps} controls width="75%" height="100%"/> */}
             <video
                 controls
-                width="30%"
                 src={`${import.meta.env.VITE_REACT_APP_URL}/routado_gps.mp4`}> 
                 Your browser does not support the video tag.
             </video>

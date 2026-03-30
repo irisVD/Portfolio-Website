@@ -217,8 +217,10 @@ a {
         color: rgba($color: var(--primary-color-darker), $alpha: 1);
     }
 }
-.experience{
-    padding: 0 15%;
+.content{
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 5em;
 
     div, p {
@@ -351,6 +353,9 @@ a {
             font-size: 20px;
         }
     }
+    .content {
+        width: 85%;
+    }
     .qualities {
         width: 95%;
         font-size: 14px;
@@ -363,10 +368,7 @@ a {
             padding-bottom: 1em;
         }
     }
-    @media only screen and (max-width: 450px) {
-        .qualities {
-            font-size: 12px;
-        }
+    @media only screen and (max-width: 600px) {
     
         .menu-items {
             display: block !important;
@@ -378,6 +380,12 @@ a {
         }
         .menu-big-screen {
             display: none;
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+        .qualities {
+            font-size: 12px;
         }
     }
 }
@@ -394,3 +402,8 @@ a {
             overflow-x: hidden;
         }
     }
+
+.error {
+    color: red;
+    margin-bottom: 1em;
+}

@@ -38,5 +38,6 @@
     },
     "xplannerTimeTracker": {
         "graduateThesis": "See my graduate thesis below (only in Dutch):"
-    }
+    },
+    "azureFreeSubscription": "The web app is hosted on a free Azure subscription so videos can take a while to load in."
 }
