@@ -29,18 +29,37 @@ const RoutadoPage = () => {
         <ul>
             <li>{t("dogWalkerFunct1", {ns:"routado"})}</li>
             {/* <ReactPlayer className={styles['videoplayer']} src={dogwalkerGps} controls width="75%" height="100%"/> */}
+            <video
+                controls
+                width="30%"
+                src={`${import.meta.env.VITE_REACT_APP_URL}/routado_dogwalker_walks.mp4`}> 
+                Your browser does not support the video tag.
+            </video>
             <li>{t("dogWalkerFunct2", {ns:"routado"})}</li>
-            {/* <div className={styles['flex-container']}>
-                <ReactPlayer className={styles['videoplayer']} src={dogwalkerDogs} controls width="48%" height="100%" />
-                <ReactPlayer className={styles['videoplayer']} src={dogwalkerProfile} controls width="48%" height="100%" />
-            </div> */}
+            <div className={styles['flex-container']}>
+                {/* <ReactPlayer className={styles['videoplayer']} src={dogwalkerDogs} controls width="48%" height="100%" />
+                <ReactPlayer className={styles['videoplayer']} src={dogwalkerProfile} controls width="48%" height="100%" /> */}
+                <video
+                    controls
+                    width="30%"
+                    src={`${import.meta.env.VITE_REACT_APP_URL}/routado_dogwalker_dogs.mp4`}> 
+                    Your browser does not support the video tag.
+                </video>
+                <video
+                    controls
+                    width="30%"
+                    src={`${import.meta.env.VITE_REACT_APP_URL}/routado_profile_dogshelterinfo.mp4`}> 
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             
             <li>{t("dogWalkerFunct3", {ns:"routado"})}</li>
             
-            {/* <div className={styles['flex-container']}>
-                <ReactPlayer className={styles['videoplayer']} src={dogwalkerWalks} controls width="48%" height="100%" />
-                <ReactPlayer className={styles['videoplayer']} src={dogwalkerLogin} controls width="48%" height="100%" />
-            </div> */}
+            <div className={styles['flex-container']}>
+                {/* <ReactPlayer className={styles['videoplayer']} src={dogwalkerWalks} controls width="48%" height="100%" />
+                <ReactPlayer className={styles['videoplayer']} src={dogwalkerLogin} controls width="48%" height="100%" /> */}
+
+            </div>
             
         </ul>
     </div>

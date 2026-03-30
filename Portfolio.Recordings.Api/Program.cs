@@ -1,4 +1,3 @@
-using Portfolio.Recordings.Persistence;
 using Portfolio.Recordings.Services;
 
 namespace Portfolio.Recordings.Api;
@@ -13,23 +12,19 @@ public class Program
         {
             options.AddPolicy("AllowAllOrigins", policy =>
             {
-            policy.WithOrigins("*")
+            policy.WithOrigins("https://irisvandamme.com", "https://www.irisvandamme.com", "salmon-tree-01520e21e.2.azurestaticapps.net")
                     .AllowAnyMethod()
                     .AllowAnyHeader();
             });
         });
 
 
+        // configure service options
+        builder.Services.Configure<RecordingsServiceOptions>(
+            builder.Configuration.GetSection(nameof(RecordingsServiceOptions)));
 
-
-        builder.Services.Configure<RecordingsRepositoryOptions>(
-            builder.Configuration.GetSection(nameof(RecordingsRepositoryOptions)));
-
-        builder.Services.AddScoped<IRecordingsService>(provider =>
-            new RecordingsService(
-                provider.GetRequiredService<IRecordingsRepository>()
-            )
-        );
+        // inject service
+        builder.Services.AddScoped<IRecordingsService, RecordingsService>();
 
         builder.Services.AddControllers()
             .AddMvcOptions(options =>
