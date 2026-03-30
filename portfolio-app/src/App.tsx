@@ -51,13 +51,19 @@ const App = () => {
         <p>{t("app.qualities.independent")}</p>
       </div>
 
-      <p className='content error'>{t("azureFreeSubscription", {ns:"global"})}</p>
+      <div className='content error'>
+        <p>{t("azureFreeSubscription", {ns:"global"})}</p>
+      </div>
+      
 
       {/* ABOUT ME */}
       <div className='about-me' id="about-me">
-        <div style={{display: "flex", alignItems: "center"}}><h3>{t("header.aboutMe")}</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
-        <p>{t("app.aboutMe")}</p>
-        <p style={{fontWeight: "600"}}>{t("app.job")}</p>
+        <div className='content'>
+          <div style={{display: "flex", alignItems: "center"}}><h3>{t("header.aboutMe")}</h3><IoIosArrowForward style={{marginLeft: "0.5em"}}/></div>
+          <p>{t("app.aboutMe")}</p>
+          <p style={{fontWeight: "600"}}>{t("app.job")}</p>
+        </div>
+        
       </div>
 
       <DottedLine />

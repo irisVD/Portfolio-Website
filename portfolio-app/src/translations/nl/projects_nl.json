@@ -3,7 +3,7 @@
         {
             "title": "Voedselvoorraad",
             "image": "../../voedselvoorraad.jpg",
-            "description": "Voedselvoorraad is een webapplicatie die je helpt je voorraadkast te organiseren, te onderhouden en recepten op te slaan. \nDe gebruiker ontvangt meldingen voor producten die bijna over datum zijn en toont recepten met deze producten. \n\nZoek naar recepten met ingrediënten die je al in je voorraadkast hebt staan. Als je het recept maakt, kun je met één klik de benodigde ingrediënten uit je voorraad halen. \nDeze applicatie werd ontwikkeld als groepsproject voor een schoolopdracht waarop we gezamelijk 15/20 scoorde.",
+            "description": "Voedselvoorraad is een webapplicatie die je helpt je voorraadkast te organiseren, te onderhouden en recepten op te slaan. \nDe gebruiker ontvangt meldingen voor producten die bijna over datum zijn en toont recepten met deze producten. \n\nZoek naar recepten met ingrediënten die je al in je voorraadkast hebt staan. Als je het recept maakt, kun je met één klik de benodigde ingrediënten uit je voorraad halen. \nDeze applicatie werd ontwikkeld als groepsproject voor een schoolopdracht met een rapportcijfer van 15/20.",
             "backend": "C# (.NET, ASP.NET)",
             "frontend": "React",
             "database": "MySQL database and Azure blob storage",
@@ -25,7 +25,7 @@
         {
             "title": "Routado",
             "image": "../../routado-icon.png",
-            "description": "Routado is een React native applicatie die hondenasielen de mogelijkheid geeft om de honden informatie te beheren en de wandelroutes van de honden/wandelaars op te volgen. \nDeze applicatie werd ontwikkeld als individueel project voor een schoolopdracht waarop ik 16/20 scoorde.",
+            "description": "Routado is een React native applicatie die hondenasielen de mogelijkheid geeft om de honden informatie te beheren en de wandelroutes van de honden/wandelaars op te volgen. \nDeze applicatie werd ontwikkeld als individueel project voor een schoolopdracht met een rapportcijfer van 16/20.",
             "backend": "/",
             "frontend": "React native",
             "database": "Firebase firestore, Firebase authentication",
@@ -36,7 +36,7 @@
         {
             "title": "Graduaatsproef XPlanner time tracker",
             "image": "../../xplanner-time-tracker.jpg",
-            "description": "De ontwikkeling van een nieuwe dynamische frontend interface voor Xplanner met behulp van de functionele programmeertaal Clojure en het framework re-frame voor de softwareontwikkelaars en manager van Lorre Engineering om visueel een beter overzicht te krijgen van de Scrumplanning- en registratie.\nDeze applicatie werd ontwikkeld als individueel project waarop ik 16/20 scoorde.",
+            "description": "De ontwikkeling van een nieuwe dynamische frontend interface voor Xplanner met behulp van de functionele programmeertaal Clojure en het framework re-frame voor de softwareontwikkelaars en manager van Lorre Engineering om visueel een beter overzicht te krijgen van de Scrumplanning- en registratie.\nDeze applicatie werd ontwikkeld als individueel project met een rapportcijfer van 16/20.",
             "backend": "Clojure",
             "frontend": "re-frame",
             "database": "PostgreSQL",

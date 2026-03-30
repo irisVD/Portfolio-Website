@@ -46,6 +46,7 @@ button {
         .menu-icon {
             font-size: 30px;
             display: none;
+            color: rgb(var(--text-color));
             svg {
                 align-self: center;
             }
@@ -207,18 +208,18 @@ a {
 }
 .about-me {
     background-color: rgba($color: var(--primary-color), $alpha: 0.2);
-    padding: 2em 15%;
     margin-bottom: 5em;
 
-    div, p {
-        margin: 1em;
-    }
     p:first-of-type {
         color: rgba($color: var(--primary-color-darker), $alpha: 1);
     }
+
+    .content {
+        padding: 1em 0;
+    }
 }
 .content{
-    width: 78%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5em;
@@ -294,9 +295,6 @@ a {
 }
 
 @media only screen and (max-width: 850px) {
-    .about-me {
-        padding: 1em 10%;
-    }
     .qualities {
         font-size: 20px;
     }

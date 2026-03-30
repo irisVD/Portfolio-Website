@@ -3,7 +3,7 @@
         {
             "title": "Voedselvoorraad (Food pantry)",
             "image": "../../voedselvoorraad.jpg",
-            "description": "Voedselvoorraad (Food pantry) is a web application that helps you organise & maintain your pantry and save recipes.\nThe user gets notifications for products that are nearing the expiration date and show recipes with products near expiration date.\n\nLook for recipes with ingredients you have in your pantry already. If you make the recipe, with one click you can subtract the needed ingredients from your inventory. \nThis application was developed as a group project for a school assignment and we received a grade of 15/20.",
+            "description": "Voedselvoorraad (Food pantry) is a web application that helps you organise & maintain your pantry and save recipes.\nThe user gets notifications for products that are nearing the expiration date and show recipes with products near expiration date.\n\nLook for recipes with ingredients you have in your pantry already. If you make the recipe, with one click you can subtract the needed ingredients from your inventory. \nThis application was developed as a group project for a school assignment and received a grade of 15/20.",
             "backend": "C# (.NET, ASP.NET)",
             "frontend": "React",
             "database": "MySQL database and Azure blob storage",
@@ -25,7 +25,7 @@
         {
             "title": "Routado",
             "image": "../../routado-icon.png",
-            "description": "Routado is a React native application that allows dogshelters to manage the dogs information and displays an overview of the dog walking routes of the dogs/dogwalkers. \nThis application was developed as an individual project for a school assignment and I received a grade of 16/20.",
+            "description": "Routado is a React native application that allows dogshelters to manage the dogs information and displays an overview of the dog walking routes of the dogs/dogwalkers. \nThis application was developed as an individual project for a school assignment and received a grade of 16/20.",
             "backend": "/",
             "frontend": "React native",
             "database": "Firebase firestore, Firebase authentication",
@@ -36,7 +36,7 @@
         {
             "title": "Graduate thesis XPlanner time tracker",
             "image": "../../xplanner-time-tracker.jpg",
-            "description": "The implementation of a new dynamic frontend interface for Xplanner with the functional programming language Clojure and the framework re-frame for the software developers and the manager of Lorre Engineering. The new application shows you a better overview of the Scumplanning- and registration. \nThis application was developed as an individual project and I received a grade of 16/20.",
+            "description": "The implementation of a new dynamic frontend interface for Xplanner with the functional programming language Clojure and the framework re-frame for the software developers and the manager of Lorre Engineering. The new application shows you a better overview of the Scumplanning- and registration. \nThis application was developed as an individual project and received a grade of 16/20.",
             "backend": "Clojure",
             "frontend": "re-frame",
             "database": "PostgreSQL",
