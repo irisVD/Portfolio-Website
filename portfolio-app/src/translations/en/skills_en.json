@@ -4,7 +4,7 @@
     "Cat2": "Backend",
     "Skills2": ".NET (C#), REST API, Clojure, Node.js",
     "Cat3": "Database Management",
-    "Skills3": "MySQL, SQL Server, MongoDB, Azure Cosmos, Azure blob storage",
+    "Skills3": "MySQL, SQL Server, MongoDB, Azure Cosmos, Azure blob storage, PostgreSQL",
     "Cat4": "Other",
-    "Skills4": "GIT, UML"
+    "Skills4": "GIT, OOP Design Patterns, Claude Code"
 }

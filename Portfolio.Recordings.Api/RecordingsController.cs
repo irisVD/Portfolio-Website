@@ -1,9 +1,6 @@
-using System;
-using System.Reflection.Metadata;
-using Azure.Storage.Blobs.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Portfolio.Recordings.Services;
-using Portfolio.Recordings.Services.Contracts;
 
 namespace Portfolio.Recordings.Api;
 
@@ -12,6 +9,7 @@ namespace Portfolio.Recordings.Api;
 public class RecordingsController (IRecordingsService recordingsService) : ControllerBase
 {
         [HttpGet("{fileName}")]
+        [EnableRateLimiting("recording-limiter")]
         public async Task<IActionResult> GetRecordingAsync([FromRoute] string fileName)
         {
             Console.WriteLine("Get method called in controller");

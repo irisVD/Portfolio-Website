@@ -8,14 +8,14 @@
         "backToHome": "Terug naar Home pagina"
     },
     "app": {
-        "fullStackDeveloper": "BACKEND- EN FRONTEND ONTWIKKELAAR",
+        "fullStackDeveloper": "FULL STACK SOFTWARE ONTWIKKELAAR",
         "qualities": {
             "teamwork": "SAMENWERKING",
             "eagerToLearn": "LEERGIERIG",
             "independent": "ZELFSTANDIG"
         },
         "aboutMe": "Backend- en frontend developer, vers afgestudeerd van de HoGent (Hogeschool Gent) met het diploma graduaat Programmeren. Ik ben doorgaans continu op zoek naar nieuwe uitdagingen om meer bij te leren. Ik heb een passie voor applicatie-ontwikkeling, -integratie en -beheer. Gespecialiseerd in C# (.NET), Clojure, JavaScript (React), UML en MySQL/SQL Server. Mijn volgend doel is om een uitdagende werkomgeving te vinden, zodat ik in een team aan innoverende use cases in het werkveld kan implementeren en mijn huidige skillset verder te verbeteren door me te omringen met ervaren ontwikkelaars die me feedback kunnen geven.",
-        "job": "Momenteel beschikbaar voor een nieuwe uitdaging (gevestigd rond Mechelen).",
+        "job": "Momenteel beschikbaar voor een nieuwe uitdaging in het IT werkveld (gevestigd rond Mechelen).",
         "experience": "Stage bij Lorre Engineering waar ik werkte aan de backend en frontend van de ziekenhuisapplicatie LEMPweb. LEMPweb is een applicatie waar de patiënten de maaltijd menu's voor de komende dagen kunnen bekijken en wijzigen. Voor deze stage heb ik de programmeertaal Clojure geleerd voor zowel de backend als de frontend en implementeerde ik database beheer code in PostgreSQL. Tijdens de stage heb ik geholpen bij de ontwikkeling van een nieuwe feature (zowel user interface, design en code), bestaande code gerefactored en implementaties toegevoegd om de applicatie beveiliging volgens OWASP te verbeteren.",
         "officeInstructions": {
             "instruction": "Klik op de verschillende elementen om afgelopen programmeer projecten te ontdekken",
