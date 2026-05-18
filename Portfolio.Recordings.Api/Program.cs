@@ -23,10 +23,10 @@ public class Program
         // ratelimiting
         builder.Services.AddRateLimiter(_ => _.AddFixedWindowLimiter(policyName: "recording-limiter", options =>
         {
-            options.PermitLimit = 40;
-            options.Window = TimeSpan.FromSeconds(10);
+            options.PermitLimit = 60;
+            options.Window = TimeSpan.FromSeconds(60);
             options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-            options.QueueLimit = 20;
+            options.QueueLimit = 10;
         }));
 
 
